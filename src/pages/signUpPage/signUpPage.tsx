@@ -9,7 +9,7 @@ export const SignUpPage: FC = () => {
       
   return (
     <Page back={false}>
-      <div className='safe-area-top'>
+      <div style={{backgroundColor:"red"}} className='safe-area-top'>
           fdsf
       </div>
 
