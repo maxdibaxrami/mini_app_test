@@ -5,6 +5,6 @@ body {
 }
 
 .safe-area-top {
-  height: var(--tg-viewport-safe-area-inset-top);
+  height: calc(var(--tg-viewport-safe-area-inset-top) + var(--tg-viewport-content-safe-area-inset-top));
 }
 
