@@ -31,9 +31,7 @@ export function Root() {
       <TonConnectUIProvider
         manifestUrl={publicUrl('tonconnect-manifest.json')}
       >
-        <WebAppProvider>
           <App/>
-        </WebAppProvider>
       </TonConnectUIProvider>
     </ErrorBoundary>
   );
