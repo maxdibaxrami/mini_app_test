@@ -5,9 +5,14 @@ import { Navigate, Route, Routes, HashRouter } from 'react-router-dom';
 import { routes } from '@/navigation/routes.tsx';
 import { useEffect } from 'react';
 import useFullscreen from '@/lib/useFullscreen';
+import FontHandller from '@/FontHandller';
+import { initializeI18n } from '@/initializeI18n';
+
+import i18next from 'i18next';
 
 
 export function App() {
+
   const lp = useLaunchParams();
   const isDark = useSignal(miniApp.isDark);
   const [isFullscreen, handleFullScreen] = useFullscreen();
@@ -18,6 +23,23 @@ export function App() {
       !isFullscreen && handleFullScreen();
     }
   },[])
+
+  useEffect(() => {
+    const loadI18n = async () => {
+      await initializeI18n();
+      const currentLang = i18next.language;
+      document.documentElement.lang = currentLang;
+      document.documentElement.dir = ['ar', 'fa'].includes(currentLang) ? 'rtl' : 'ltr';
+      FontHandller();
+
+    };
+    
+    loadI18n();
+    FontHandller();
+
+    
+  }, [i18next]);
+
 
   return (
     <AppRoot
