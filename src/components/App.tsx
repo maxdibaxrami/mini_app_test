@@ -13,7 +13,10 @@ export function App() {
   const [isFullscreen, handleFullScreen] = useFullscreen();
 
   useEffect(()=>{
-    !isFullscreen && handleFullScreen();
+    if(['android', 'ios'].includes(lp.platform))
+    {
+      !isFullscreen && handleFullScreen();
+    }
   },[])
 
   return (
