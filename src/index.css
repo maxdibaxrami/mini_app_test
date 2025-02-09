@@ -8,7 +8,7 @@ body {
 }
 
 .safe-area-top {
-  padding-top: var(--tg-viewport-safe-area-inset-top);
+  margin-top: var(--tg-viewport-safe-area-inset-top);
   background-color: blue;
 }
 
