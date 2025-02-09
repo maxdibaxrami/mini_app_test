@@ -20,7 +20,7 @@ export function init(debug: boolean): void {
   initSDK();
 
   // Add Eruda if needed.
-  debug && import('eruda')
+ import('eruda')
     .then((lib) => lib.default.init())
     .catch(console.error);
 
