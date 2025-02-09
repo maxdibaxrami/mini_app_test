@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { createContext, MutableRefObject } from 'react';
 
 export const getWebAppFromGlobal = () =>

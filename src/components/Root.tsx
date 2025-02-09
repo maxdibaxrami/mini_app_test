@@ -4,7 +4,6 @@ import { App } from '@/components/App.tsx';
 import { ErrorBoundary } from '@/components/ErrorBoundary.tsx';
 import { publicUrl } from '@/helpers/publicUrl.ts';
 import WebAppProvider from '@/lib/WebAppProvider';
-import { useExpand } from '@/lib';
 
 
 function ErrorBoundaryError({ error }: { error: unknown }) {

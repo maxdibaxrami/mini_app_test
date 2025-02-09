@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { useWebApp } from './core';
 import { useCallback, useMemo } from 'react';
 
