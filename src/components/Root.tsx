@@ -3,7 +3,6 @@ import { TonConnectUIProvider } from '@tonconnect/ui-react';
 import { App } from '@/components/App.tsx';
 import { ErrorBoundary } from '@/components/ErrorBoundary.tsx';
 import { publicUrl } from '@/helpers/publicUrl.ts';
-import WebAppProvider from '@/lib/WebAppProvider';
 
 
 function ErrorBoundaryError({ error }: { error: unknown }) {
