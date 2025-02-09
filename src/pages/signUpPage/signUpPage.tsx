@@ -10,7 +10,7 @@ export const SignUpPage: FC = () => {
       
   return (
     <Page back={false}>
-      <div className='safe-area-top top-bar-height'>
+      <div className='safe-area-top top-bar-height flex items-center justify-center'>
         <SparklesText text="Mull Mull" />
       </div>
 
