@@ -9,7 +9,7 @@ export const SignUpPage: FC = () => {
       
   return (
     <Page back={false}>
-      <div style={{height:"--tg-viewport-safe-area-inset-top",backgroundColor:"red"}}>
+      <div className='safe-area-top'>
           fdsf
       </div>
 
