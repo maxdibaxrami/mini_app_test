@@ -9,11 +9,17 @@ export const SignUpPage: FC = () => {
       
   return (
     <Page back={false}>
+      <div style={{height:"--tg-viewport-safe-area-inset-top"}}>
+
+      </div>
+
       <List>
             <h1>dsa</h1>
       </List>
+
       <MainButton text="primary"/>
       <SecondaryButton color="" text="secondory" position='left'/>
+
     </Page>
   );
 };
