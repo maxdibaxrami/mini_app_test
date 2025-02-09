@@ -9,8 +9,8 @@ export const SignUpPage: FC = () => {
       
   return (
     <Page back={false}>
-      <div style={{height:"--tg-viewport-safe-area-inset-top"}}>
-
+      <div style={{height:"--tg-viewport-safe-area-inset-top",backgroundColor:"red"}}>
+          fdsf
       </div>
 
       <List>
