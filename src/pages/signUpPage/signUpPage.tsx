@@ -1,4 +1,4 @@
-import { List, Steps } from '@telegram-apps/telegram-ui';
+import {  Steps } from '@telegram-apps/telegram-ui';
 import { useState, type FC } from 'react';
 import { Page } from '@/components/Page.tsx';
 import MainButton from '@/lib/MainButton';
@@ -6,6 +6,7 @@ import SecondaryButton from '@/lib/SecondaryButton';
 import { SparklesText } from '@/components/sparkiText/sparkiText';
 import LanguageStep from './steps/lagnuageStep';
 import { useTranslation } from 'react-i18next';
+import ProfileDataStep from './steps/profileData';
 
 export const SignUpPage: FC = () => {
   const { t } = useTranslation();
@@ -36,7 +37,9 @@ export const SignUpPage: FC = () => {
           progress={5}
         />
         
-        <LanguageStep/>
+        {selectedTab === 0 && <LanguageStep/>}
+        {selectedTab === 1 && <ProfileDataStep/>}
+        
 
 
       <MainButton onClick={NextTab} text={t('Next')}/>

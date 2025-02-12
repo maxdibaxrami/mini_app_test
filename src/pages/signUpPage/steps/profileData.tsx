@@ -1,48 +1,39 @@
 
-import { List, Cell, Section, Selectable } from "@telegram-apps/telegram-ui"
-import { useState } from "react";
+import { List, Section, Input, Textarea } from "@telegram-apps/telegram-ui"
 import { useTranslation } from "react-i18next";
-import { LanguageStepSVG } from "../svg/languageStepSVG";
-import { ProfileDataSVg } from "../svg/profileDataSVG";
 
 
 const ProfileDataStep = () => {
     const { t } = useTranslation();
-    const [selectedValue , setSelectedValue ] = useState<string>('en')
 
-    const onChange = (e:any) => {
-        setSelectedValue(e.target.value)
-    }
     return <List
         style={{
         background: 'var(--tgui--secondary_bg_color)',
-        padding:"14px"
-    }}
+        }}
     >
-        <div style={{display:"flex", alignItems:"center",justifyContent:"center",width:"100%"}}>
-            <ProfileDataSVg/>
-        </div>
-
         <Section
-            footer={t('Selectedplancanbechangedatanytime')}
-            header={t('Selectlanguageforcontinue')}
+        footer="The official Telegram app is available for Android, iPhone, iPad, Windows, macOS and Linux."
+        header="Personal Information"
         >
-             <form>
-                <Cell Component="label" before={<Selectable checked={selectedValue === "en"} onClick={onChange} name="group" value="en" />} multiline>
-                    {t('en')}
-                </Cell>
-                <Cell Component="label" before={<Selectable checked={selectedValue === "ru"} onClick={onChange} name="group" value="ru" />} multiline>
-                    {t('ru')}
-                </Cell>
-                <Cell Component="label" before={<Selectable checked={selectedValue === "fa"} onClick={onChange} name="group" value="fa" />} multiline>
-                    {t('fa')}
-                </Cell>
-                <Cell Component="label" before={<Selectable checked={selectedValue === "ar"} onClick={onChange} name="group" value="ar" />} multiline>
-                    {t('ar')}
-                </Cell>
-            </form>
+            <Input
+                header={t("name")}
+                placeholder="21 y.o. designer from San Francisco"
+            />
+
+            <Textarea header={t("Bio")} placeholder="I am usual textarea" />
+
+            <Input
+                header={t("Education")}
+                placeholder="21 y.o. designer from San Francisco"
+            />
+
+            <Input
+                header={t("work")}
+                placeholder="21 y.o. designer from San Francisco"
+            />
+
         </Section>
-    </List>
+  </List>
 
 }
 
