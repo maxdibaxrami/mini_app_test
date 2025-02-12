@@ -3,9 +3,10 @@ import { List, Cell, Section, Selectable } from "@telegram-apps/telegram-ui"
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { LanguageStepSVG } from "../svg/languageStepSVG";
+import { ProfileDataSVg } from "../svg/profileDataSVG";
 
 
-const LanguageStep = () => {
+const ProfileDataStep = () => {
     const { t } = useTranslation();
     const [selectedValue , setSelectedValue ] = useState<string>('en')
 
@@ -19,7 +20,7 @@ const LanguageStep = () => {
     }}
     >
         <div style={{display:"flex", alignItems:"center",justifyContent:"center",width:"100%"}}>
-            <LanguageStepSVG/>
+            <ProfileDataSVg/>
         </div>
 
         <Section
@@ -45,4 +46,4 @@ const LanguageStep = () => {
 
 }
 
-export default LanguageStep
+export default ProfileDataStep
