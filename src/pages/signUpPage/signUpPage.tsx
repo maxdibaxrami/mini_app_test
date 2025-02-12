@@ -9,6 +9,7 @@ import { useTranslation } from 'react-i18next';
 import ProfileDataStep from './steps/profileData';
 
 export const SignUpPage: FC = () => {
+
   const { t } = useTranslation();
   const [selectedTab, setSelectedTab] = useState(0)
 
@@ -44,8 +45,8 @@ export const SignUpPage: FC = () => {
         
 
 
-      <MainButton onClick={() => NextTab()} text={t('Next')}/>
-      <SecondaryButton onClick={() => PreviousTab()} text={t('previous')} position='left'/>
+      <MainButton onClick={NextTab} text={t('Next')}/>
+      <SecondaryButton onClick={PreviousTab} text={t('previous')} position='left'/>
 
     </Page>
   );
