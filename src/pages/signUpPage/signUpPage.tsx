@@ -15,17 +15,11 @@ export const SignUpPage: FC = () => {
 
   const NextTab = () => {
     console.log(selectedTab)
-    if(selectedTab === 10){
-      return
-    }
     setSelectedTab(selectedTab + 1)
   }
 
   const PreviousTab = () => {
     console.log(selectedTab)
-    if(selectedTab === 0){
-      return
-    }
     setSelectedTab(selectedTab - 1)
   }
 
@@ -47,8 +41,8 @@ export const SignUpPage: FC = () => {
         
 
 
-      <MainButton onClick={()=> NextTab()} text={t('Next')}/>
-      <SecondaryButton onClick={()=> PreviousTab()} text={t('previous')} position='left'/>
+      <MainButton disabled={selectedTab === 10} onClick={NextTab} text={t('Next')}/>
+      <SecondaryButton disabled={selectedTab === 0} onClick={PreviousTab} text={t('previous')} position='left'/>
 
     </Page>
   );
