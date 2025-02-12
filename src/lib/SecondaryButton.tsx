@@ -70,7 +70,7 @@ const SecondaryButton = ({
   const system = useContext(systemContext);
   const buttonId = useId();
   const WebApp = useWebApp();
-  const SecondaryButton = WebApp?.secondaryButton;
+  const SecondaryButton = WebApp?.SecondaryButton;
   const themeParams = WebApp?.themeParams;
   const disabled = disable_old || disable_new;
 
