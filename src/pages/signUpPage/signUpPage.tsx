@@ -44,8 +44,8 @@ export const SignUpPage: FC = () => {
         
 
 
-      <MainButton onClick={NextTab} text={t('Next')}/>
-      <SecondaryButton onClick={PreviousTab} text={t('Selectlanguageforcontinue')} position='left'/>
+      <MainButton onClick={() => NextTab()} text={t('Next')}/>
+      <SecondaryButton onClick={() => PreviousTab()} text={t('Selectlanguageforcontinue')} position='left'/>
 
     </Page>
   );
