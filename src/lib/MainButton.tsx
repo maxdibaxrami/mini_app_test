@@ -107,7 +107,7 @@ const MainButton = ({
     if (!onClick) {
       return;
     }
-
+    console.log("Attaching click handler");
     MainButton?.onClick(onClick);
     return () => {
       MainButton?.offClick(onClick);
