@@ -2,9 +2,9 @@ import { useContext, useEffect, useId } from 'react';
 import { useWebApp, useSmoothButtonsTransition, systemContext } from './core';
 
 /**
- * The props type of {@link SecondaryButton | `SecondaryButton`}.
+ * The props type of {@link secondaryButton | `secondaryButton`}.
  */
-export interface SecondaryButtonProps {
+export interface secondaryButtonProps {
   /**
    * Current button text
    * @defaultValue Set to `CONTINUE` by default
@@ -16,8 +16,8 @@ export interface SecondaryButtonProps {
    */
   progress?: boolean;
   /**
-   * Just an alias on the {@link SecondaryButtonProps.disabled}
-   * @deprecated Use {@link SecondaryButtonProps.disabled} instead, will be removed
+   * Just an alias on the {@link secondaryButtonProps.disabled}
+   * @deprecated Use {@link secondaryButtonProps.disabled} instead, will be removed
    * @ignore
    */
   disable?: boolean;
@@ -43,7 +43,7 @@ export interface SecondaryButtonProps {
 }
 
 /**
- * Renders a {@link telegram!SecondaryButton} component in React app as {@link react!Component}
+ * Renders a {@link telegram!secondaryButton} component in React app as {@link react!Component}
  *
  * ```tsx
  * import { MainButton } from "@vkruglikov/react-telegram-web-app";
@@ -65,66 +65,66 @@ const SecondaryButton = ({
   textColor,
   position,
   onClick,
-}: SecondaryButtonProps): null => {
+}: secondaryButtonProps): null => {
 
   const system = useContext(systemContext);
   const buttonId = useId();
   const WebApp = useWebApp();
-  const SecondaryButton = WebApp?.SecondaryButton;
+  const secondaryButton = WebApp?.secondaryButton;
   const themeParams = WebApp?.themeParams;
   const disabled = disable_old || disable_new;
 
   useEffect(() => {
-    SecondaryButton?.setParams({
+    secondaryButton?.setParams({
       color: color || themeParams?.button_color || '#fff',
       position:position,
       
     });
-  }, [color, themeParams, SecondaryButton]);
+  }, [color, themeParams, secondaryButton]);
 
   useEffect(() => {
-    SecondaryButton?.setParams({
+    secondaryButton?.setParams({
       text_color: textColor || themeParams?.button_text_color || '#000',
     });
-  }, [SecondaryButton, themeParams, textColor]);
+  }, [secondaryButton, themeParams, textColor]);
 
   useEffect(() => {
-    SecondaryButton?.setText(text);
-  }, [text, SecondaryButton]);
+    secondaryButton?.setText(text);
+  }, [text, secondaryButton]);
 
   useEffect(() => {
     if (disabled) {
-        SecondaryButton?.disable();
+        secondaryButton?.disable();
     } else if (!disabled) {
-        SecondaryButton?.enable();
+        secondaryButton?.enable();
     }
-  }, [disabled, SecondaryButton]);
+  }, [disabled, secondaryButton]);
 
   useEffect(() => {
     if (progress) {
-        SecondaryButton?.showProgress(false);
+        secondaryButton?.showProgress(false);
     } else if (!progress) {
-        SecondaryButton?.hideProgress();
+        secondaryButton?.hideProgress();
     }
-  }, [progress, SecondaryButton]);
+  }, [progress, secondaryButton]);
 
   useEffect(() => {
     if (!onClick) {
       return;
     }
     console.log("Attaching click handler");
-    SecondaryButton?.onClick(onClick);
+    secondaryButton?.onClick(onClick);
     return () => {
       console.log("Removing click handler");
 
-        SecondaryButton?.offClick(onClick);
+        secondaryButton?.offClick(onClick);
     };
-  }, [onClick, SecondaryButton]);
+  }, [onClick, secondaryButton]);
 
   useSmoothButtonsTransition({
-    show: SecondaryButton?.show,
-    hide: SecondaryButton?.hide,
-    currentShowedIdRef: system.SecondaryButton,
+    show: secondaryButton?.show,
+    hide: secondaryButton?.hide,
+    currentShowedIdRef: system.secondaryButton,
     id: buttonId,
   });
 

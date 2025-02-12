@@ -40,14 +40,14 @@ export const optionsContext = createContext<Options>(DEFAULT_OPTIONS);
 type SystemContext = {
   MainButton: MutableRefObject<null | string>;
   BackButton: MutableRefObject<null | string>;
-  SecondaryButton: MutableRefObject<null | string>;
+  secondaryButton: MutableRefObject<null | string>;
 
 };
 
 export const createSystemContextValue = () => ({
   MainButton: { current: null },
   BackButton: { current: null },
-  SecondaryButton: { current: null }
+  secondaryButton: { current: null }
 });
 
 export const systemContext = createContext<SystemContext>(
