@@ -14,6 +14,7 @@ export const SignUpPage: FC = () => {
   const [selectedTab, setSelectedTab] = useState(0)
 
   const NextTab = () => {
+    console.log(selectedTab)
     if(selectedTab === 10){
       return
     }
@@ -21,6 +22,7 @@ export const SignUpPage: FC = () => {
   }
 
   const PreviousTab = () => {
+    console.log(selectedTab)
     if(selectedTab === 0){
       return
     }
