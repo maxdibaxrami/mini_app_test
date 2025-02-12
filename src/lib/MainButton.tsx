@@ -70,6 +70,8 @@ const MainButton = ({
   const themeParams = WebApp?.themeParams;
   const disabled = disable_old || disable_new;
 
+  console.log('WebApp instance:', WebApp);
+
   useEffect(() => {
     MainButton?.setParams({
       color: color || themeParams?.button_color || '#fff',
@@ -107,8 +109,11 @@ const MainButton = ({
     if (!onClick) {
       return;
     }
-    console.log("Attaching click handler");
-    MainButton?.onClick(onClick);
+
+    MainButton?.onClick(() => {
+    console.log('MainButton clicked');
+    onClick();
+  });
     return () => {
       console.log("Removing click handler");
       MainButton?.offClick(onClick);
