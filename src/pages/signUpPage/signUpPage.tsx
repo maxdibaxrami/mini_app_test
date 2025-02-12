@@ -1,5 +1,5 @@
 import {  Steps } from '@telegram-apps/telegram-ui';
-import { useState, type FC } from 'react';
+import { useEffect, useState, type FC } from 'react';
 import { Page } from '@/components/Page.tsx';
 import MainButton from '@/lib/MainButton';
 import SecondaryButton from '@/lib/SecondaryButton';
@@ -25,6 +25,8 @@ export const SignUpPage: FC = () => {
     }
     setSelectedTab(selectedTab - 1)
   }
+
+  useEffect(()=>{console.log(selectedTab)},[selectedTab])
 
   return (
     <Page back={false}>
