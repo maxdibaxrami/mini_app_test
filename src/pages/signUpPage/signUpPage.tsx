@@ -14,14 +14,20 @@ export const SignUpPage: FC = () => {
   const [selectedTab, setSelectedTab] = useState(0)
 
   const NextTab = () => {
-    console.log(selectedTab)
-    setSelectedTab(selectedTab + 1)
-  }
-
+    console.log("Before NextTab:", selectedTab); // Log before update
+    setSelectedTab((prevTab) => {
+      console.log("After NextTab (updated):", prevTab + 1); // Log expected new value
+      return prevTab + 1;
+    });
+  };
+  
   const PreviousTab = () => {
-    console.log(selectedTab)
-    setSelectedTab(selectedTab - 1)
-  }
+    console.log("Before PreviousTab:", selectedTab); // Log before update
+    setSelectedTab((prevTab) => {
+      console.log("After PreviousTab (updated):", prevTab - 1); // Log expected new value
+      return prevTab - 1;
+    });
+  };
 
   useEffect(()=>{console.log(selectedTab)},[selectedTab])
 
@@ -41,9 +47,18 @@ export const SignUpPage: FC = () => {
         
 
 
-      <MainButton disabled={selectedTab === 10} onClick={NextTab} text={t('Next')}/>
-      <SecondaryButton disabled={selectedTab === 0} onClick={PreviousTab} text={t('previous')} position='left'/>
+      <MainButton 
+        disabled={selectedTab >= 10} // Prevent exceeding 10
+        onClick={NextTab} 
+        text={t('Next')} 
+      />
 
+      <SecondaryButton 
+        disabled={selectedTab <= 0} // Prevent going below 0
+        onClick={PreviousTab} 
+        text={t('Previous')} 
+        position="left" 
+      />
     </Page>
   );
 };
