@@ -9,6 +9,7 @@ import FontHandller from '@/FontHandller';
 import { initializeI18n } from '@/initializeI18n';
 
 import i18next from 'i18next';
+import { I18nextProvider } from 'react-i18next';
 
 
 export function App() {
@@ -42,16 +43,18 @@ export function App() {
 
 
   return (
-    <AppRoot
-      appearance={isDark ? 'dark' : 'light'}
-      platform={['macos', 'ios'].includes(lp.platform) ? 'ios' : 'base'}
-    >
-      <HashRouter>
-        <Routes>
-          {routes.map((route) => <Route key={route.path} {...route} />)}
-          <Route path="*" element={<Navigate to="/"/>}/>
-        </Routes>
-      </HashRouter>
-    </AppRoot>
+    <I18nextProvider i18n={i18next}>
+      <AppRoot
+        appearance={isDark ? 'dark' : 'light'}
+        platform={['macos', 'ios'].includes(lp.platform) ? 'ios' : 'base'}
+      >
+        <HashRouter>
+          <Routes>
+            {routes.map((route) => <Route key={route.path} {...route} />)}
+            <Route path="*" element={<Navigate to="/"/>}/>
+          </Routes>
+        </HashRouter>
+      </AppRoot>
+    </I18nextProvider>
   );
 }

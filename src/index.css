@@ -9,10 +9,8 @@ body {
 
 .safe-area-top {
   margin-top: var(--tg-viewport-safe-area-inset-top);
-  background-color: blue;
 }
 
 .top-bar-height{
   height: var(--tg-viewport-content-safe-area-inset-top);
-  background-color: red;
 }

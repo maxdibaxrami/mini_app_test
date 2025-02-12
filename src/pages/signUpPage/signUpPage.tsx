@@ -1,13 +1,14 @@
-import { List } from '@telegram-apps/telegram-ui';
-import type { FC } from 'react';
+import { List, Steps } from '@telegram-apps/telegram-ui';
+import { type FC } from 'react';
 import { Page } from '@/components/Page.tsx';
 import MainButton from '@/lib/MainButton';
 import SecondaryButton from '@/lib/SecondaryButton';
 import { SparklesText } from '@/components/sparkiText/sparkiText';
+import LanguageStep from './steps/lagnuageStep';
 
 export const SignUpPage: FC = () => {
+  
 
-      
   return (
     <Page back={false}>
       <div className='safe-area-top top-bar-height flex items-center justify-center'>
@@ -15,7 +16,13 @@ export const SignUpPage: FC = () => {
       </div>
 
       <List>
-            <h1>dsa</h1>
+        <Steps
+          count={10}
+          progress={5}
+        />
+        
+        <LanguageStep/>
+
       </List>
 
       <MainButton text="primary"/>
