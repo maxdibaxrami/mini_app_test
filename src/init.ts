@@ -3,7 +3,9 @@ import {
   viewport,
   themeParams,
   miniApp,
+  mainButton,
   initData,
+  secondaryButton,
   $debug,
   init as initSDK,
 } from '@telegram-apps/sdk-react';
@@ -32,6 +34,8 @@ export function init(debug: boolean): void {
   // Mount all components used in the project.
   backButton.mount();
   miniApp.mount();
+  mainButton.mount();
+  secondaryButton.mount();
   themeParams.mount();
   initData.restore();
   void viewport

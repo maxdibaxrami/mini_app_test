@@ -70,7 +70,7 @@ const SecondaryButton = ({
   const system = useContext(systemContext);
   const buttonId = useId();
   const WebApp = useWebApp();
-  const SecondaryButton = WebApp?.SecondaryButton;
+  const SecondaryButton = WebApp?.secondaryButton;
   const themeParams = WebApp?.themeParams;
   const disabled = disable_old || disable_new;
 
@@ -115,7 +115,8 @@ const SecondaryButton = ({
     console.log("Attaching click handler");
     SecondaryButton?.onClick(onClick);
     return () => {
-        console.log("Removing click handler");
+      console.log("Removing click handler");
+
         SecondaryButton?.offClick(onClick);
     };
   }, [onClick, SecondaryButton]);
