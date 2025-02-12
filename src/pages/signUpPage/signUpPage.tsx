@@ -1,12 +1,12 @@
 import {  Steps } from '@telegram-apps/telegram-ui';
 import { useEffect, useState, type FC } from 'react';
 import { Page } from '@/components/Page.tsx';
-import MainButton from '@/lib/MainButton';
-import SecondaryButton from '@/lib/SecondaryButton';
 import { SparklesText } from '@/components/sparkiText/sparkiText';
 import LanguageStep from './steps/lagnuageStep';
 import { useTranslation } from 'react-i18next';
 import ProfileDataStep from './steps/profileData';
+import { MainButton } from '@/lib';
+import SecondaryButton from '@/lib/SecondaryButton';
 
 export const SignUpPage: FC = () => {
 
