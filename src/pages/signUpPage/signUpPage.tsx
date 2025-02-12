@@ -5,7 +5,7 @@ import { SparklesText } from '@/components/sparkiText/sparkiText';
 import LanguageStep from './steps/lagnuageStep';
 import { useTranslation } from 'react-i18next';
 import ProfileDataStep from './steps/profileData';
-import { MainButton } from '@/lib';
+import MainButton from '@/lib/MainButton';
 import SecondaryButton from '@/lib/SecondaryButton';
 
 export const SignUpPage: FC = () => {
