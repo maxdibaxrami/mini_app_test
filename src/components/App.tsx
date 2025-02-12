@@ -10,6 +10,7 @@ import { initializeI18n } from '@/initializeI18n';
 
 import i18next from 'i18next';
 import { I18nextProvider } from 'react-i18next';
+import WebAppProvider from '@/lib/WebAppProvider';
 
 
 export function App() {
@@ -44,17 +45,23 @@ export function App() {
 
   return (
     <I18nextProvider i18n={i18next}>
-      <AppRoot
-        appearance={isDark ? 'dark' : 'light'}
-        platform={['macos', 'ios'].includes(lp.platform) ? 'ios' : 'base'}
+      <WebAppProvider
+        options={{
+          smoothButtonsTransition: true
+        }}
       >
-        <HashRouter>
-          <Routes>
-            {routes.map((route) => <Route key={route.path} {...route} />)}
-            <Route path="*" element={<Navigate to="/"/>}/>
-          </Routes>
-        </HashRouter>
-      </AppRoot>
+        <AppRoot
+          appearance={isDark ? 'dark' : 'light'}
+          platform={['macos', 'ios'].includes(lp.platform) ? 'ios' : 'base'}
+        >
+          <HashRouter>
+            <Routes>
+              {routes.map((route) => <Route key={route.path} {...route} />)}
+              <Route path="*" element={<Navigate to="/"/>}/>
+            </Routes>
+          </HashRouter>
+        </AppRoot>
+      </WebAppProvider>
     </I18nextProvider>
   );
 }
