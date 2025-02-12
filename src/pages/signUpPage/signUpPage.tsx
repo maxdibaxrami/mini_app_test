@@ -33,7 +33,7 @@ export const SignUpPage: FC = () => {
 
         <Steps
           count={10}
-          progress={5}
+          progress={selectedTab}
         />
         
         {selectedTab === 0 && <LanguageStep/>}
@@ -42,7 +42,7 @@ export const SignUpPage: FC = () => {
 
 
       <MainButton disabled={selectedTab === 10} onClick={NextTab} text={t('Next')}/>
-      <SecondaryButton disabled={selectedTab === 0} onClick={PreviousTab} text={t('previous')} position='left'/>
+      <SecondaryButton progress={true} disabled={selectedTab === 0} onClick={PreviousTab} text={t('previous')} position='left'/>
 
     </Page>
   );
