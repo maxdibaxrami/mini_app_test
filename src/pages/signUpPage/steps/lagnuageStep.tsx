@@ -27,7 +27,7 @@ const LanguageStep = () => {
             header={t('Selectlanguageforcontinue')}
         >
              <form>
-                <Cell Component="label" before={<Selectable checked={selectedValue === "en"} onClick={onChange} name="group" value="en" />} multiline>
+                <Cell Component="label" before={<Selectable defaultChecked checked={selectedValue === "en"} onClick={onChange} name="group" value="en" />} multiline>
                     {t('en')}
                 </Cell>
                 <Cell Component="label" before={<Selectable checked={selectedValue === "ru"} onClick={onChange} name="group" value="ru" />} multiline>
