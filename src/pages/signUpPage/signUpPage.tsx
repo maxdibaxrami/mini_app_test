@@ -12,7 +12,7 @@ import SecondaryButton from '@/lib/SecondaryButton';
 export const SignUpPage = () => {
 
   const { t } = useTranslation();
-  const [selectedTab, setSelectedTab] = useState(1)
+  const [selectedTab, setSelectedTab] = useState(0)
 
 
   const PreviousTab = () => {

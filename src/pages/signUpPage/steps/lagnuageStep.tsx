@@ -15,7 +15,6 @@ const LanguageStep = () => {
     return <List
         style={{
         background: 'var(--tgui--secondary_bg_color)',
-        padding:"14px"
     }}
     >
         <div style={{display:"flex", alignItems:"center",justifyContent:"center",width:"100%"}}>
@@ -27,16 +26,16 @@ const LanguageStep = () => {
             header={t('Selectlanguageforcontinue')}
         >
              <form>
-                <Cell Component="label" before={<Selectable defaultChecked checked={selectedValue === "en"} onClick={onChange} name="group" value="en" />} multiline>
+                <Cell Component="label" description="English" before={<Selectable defaultChecked checked={selectedValue === "en"} onClick={onChange} name="group" value="en" />} multiline>
                     {t('en')}
                 </Cell>
-                <Cell Component="label" before={<Selectable checked={selectedValue === "ru"} onClick={onChange} name="group" value="ru" />} multiline>
+                <Cell Component="label" description="русский" before={<Selectable checked={selectedValue === "ru"} onClick={onChange} name="group" value="ru" />} multiline>
                     {t('ru')}
                 </Cell>
-                <Cell Component="label" before={<Selectable checked={selectedValue === "fa"} onClick={onChange} name="group" value="fa" />} multiline>
+                <Cell Component="label" description="فارسی" before={<Selectable checked={selectedValue === "fa"} onClick={onChange} name="group" value="fa" />} multiline>
                     {t('fa')}
                 </Cell>
-                <Cell Component="label" before={<Selectable checked={selectedValue === "ar"} onClick={onChange} name="group" value="ar" />} multiline>
+                <Cell Component="label" description="عربي" before={<Selectable checked={selectedValue === "ar"} onClick={onChange} name="group" value="ar" />} multiline>
                     {t('ar')}
                 </Cell>
             </form>
