@@ -32,7 +32,7 @@ export const SignUpPage: FC = () => {
   useEffect(()=>{console.log(selectedTab)},[selectedTab])
 
   return (
-    <Page back={false}>
+    <Page back={true}>
       <div className='safe-area-top top-bar-height flex items-center justify-center'>
         <SparklesText text="Mull Mull" />
       </div>
