@@ -74,8 +74,6 @@ const SecondaryButton = ({
   const themeParams = WebApp?.themeParams;
   const disabled = disable_old || disable_new;
 
-  secondaryButton?.mount()
-
   useEffect(() => {
     secondaryButton?.setParams({
       color: color || themeParams?.button_color || '#fff',

@@ -49,13 +49,13 @@ export const SignUpPage: FC = () => {
 
       <MainButton 
         disabled={selectedTab >= 10} // Prevent exceeding 10
-        onClick={NextTab} 
+        onClick={()=> NextTab()} 
         text={t('Next')} 
       />
 
       <SecondaryButton 
         disabled={selectedTab <= 0} // Prevent going below 0
-        onClick={PreviousTab} 
+        onClick={()=> PreviousTab()} 
         text={t('Previous')} 
         position="left" 
       />

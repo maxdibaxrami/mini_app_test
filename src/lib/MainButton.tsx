@@ -71,7 +71,7 @@ const MainButton = ({
   const disabled = disable_old || disable_new;
 
   console.log('WebApp instance:', WebApp);
-  MainButton?.mount()
+
   useEffect(() => {
     MainButton?.setParams({
       color: color || themeParams?.button_color || '#fff',
@@ -110,7 +110,7 @@ const MainButton = ({
       return;
     }
 
-    MainButton.onClick(()=> console.log("test"));
+    MainButton.onClick(onClick);
     return () => {
       console.log("Removing click handler");
       MainButton.offClick(onClick);
