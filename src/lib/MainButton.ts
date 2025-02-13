@@ -34,10 +34,7 @@ const MainButton: React.FC<MainButtonProps> = ({
     }
 
     return () => {
-      // Unmount when the component is unmounted
-      if (mainButton.isMounted()) {
         mainButton.unmount();
-      }
     };
   }, [MiniApp]);
 

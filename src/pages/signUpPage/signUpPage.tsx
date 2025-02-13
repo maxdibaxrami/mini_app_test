@@ -64,7 +64,7 @@ export const SignUpPage = () => {
           isEnabled={true}
           isLoaderVisible={false}
           isVisible={true}
-          position="bottom"
+          position="left"
           onClick={PreviousTab}
         />
 

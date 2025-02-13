@@ -9,7 +9,7 @@ interface SecondaryButtonProps {
   isEnabled?: boolean;
   isLoaderVisible?: boolean;
   isVisible?: boolean;
-  position?: 'top' | 'bottom';    // Only 'top' or 'bottom' allowed for position
+  position?: 'top' | 'bottom' | 'left' | 'right';    // Only 'top' or 'bottom' allowed for position
   onClick?: () => void;
 }
 
