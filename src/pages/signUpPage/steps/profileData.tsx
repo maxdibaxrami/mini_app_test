@@ -32,21 +32,6 @@ const ProfileDataStep = () => {
             <Textarea header={t("Bio")} placeholder={t("bio_placeholder")} />
         </Section>
 
-        <Section
-            header={t('Workandeducation')}
-            footer={t("Selectedplancanbechangedatanytime")}
-        >
-            <Input
-                header={t("Education")}
-                placeholder={t("education_placeholder")}
-            />
-
-            <Input
-                header={t("work")}
-                placeholder={t("work_placeholder")}
-            />
-        </Section>
-
   </List>
 
 }
