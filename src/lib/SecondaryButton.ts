@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { secondaryButton } from '@telegram-apps/sdk';
+import { secondaryButton, miniApp } from '@telegram-apps/sdk-react';
 
 interface SecondaryButtonProps {
   text?: string;
@@ -25,6 +25,7 @@ const SecondaryButton: React.FC<SecondaryButtonProps> = ({
   onClick,
 }) => {
 
+  const MiniApp = miniApp.isMounted()
 
   useEffect(() => {
     console.log(secondaryButton.setParams.isAvailable())
@@ -40,7 +41,7 @@ const SecondaryButton: React.FC<SecondaryButtonProps> = ({
         textColor,
       });
     }
-  }, [backgroundColor, hasShineEffect, isEnabled, isLoaderVisible, isVisible, position, text, textColor]);
+  }, [backgroundColor, hasShineEffect, isEnabled, isLoaderVisible, isVisible, position, text, textColor, MiniApp]);
 
   useEffect(() => {
     console.log(secondaryButton.onClick.isAvailable())
@@ -54,7 +55,7 @@ const SecondaryButton: React.FC<SecondaryButtonProps> = ({
         secondaryButton.offClick(onClick);
       };
     }
-  }, [onClick]);
+  }, [onClick, MiniApp]);
 
   return null; // No visual component, this button exists within the Telegram Mini App's UI
 };

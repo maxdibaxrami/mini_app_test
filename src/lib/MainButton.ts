@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { mainButton } from '@telegram-apps/sdk';
+import { mainButton, miniApp } from '@telegram-apps/sdk-react';
 
 interface MainButtonProps {
   text?: string;
@@ -23,6 +23,8 @@ const MainButton: React.FC<MainButtonProps> = ({
   onClick,
 }) => {
 
+  const MiniApp = miniApp.isMounted()
+
   useEffect(() => {
     // Mount the main button if available
     console.log("111")
@@ -37,7 +39,7 @@ const MainButton: React.FC<MainButtonProps> = ({
         mainButton.unmount();
       }
     };
-  }, []);
+  }, [MiniApp]);
 
   useEffect(() => {
     // Set button parameters if setParams is available
@@ -54,7 +56,7 @@ const MainButton: React.FC<MainButtonProps> = ({
         textColor,
       });
     }
-  }, [backgroundColor, hasShineEffect, isEnabled, isLoaderVisible, isVisible, text, textColor]);
+  }, [backgroundColor, hasShineEffect, isEnabled, isLoaderVisible, isVisible, text, textColor,MiniApp]);
 
   useEffect(() => {
     console.log(mainButton.onClick.isAvailable())
@@ -67,7 +69,7 @@ const MainButton: React.FC<MainButtonProps> = ({
         mainButton.offClick(onClick);
       };
     }
-  }, [onClick]);
+  }, [onClick, MiniApp]);
 
   return null; // This component renders nothing visually
 };
