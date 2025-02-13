@@ -33,11 +33,12 @@ export function init(debug: boolean): void {
 
   // Mount all components used in the project.
   backButton.mount();
+  mainButton.mount();
+  secondaryButton.mount();
   miniApp.mount();
   themeParams.mount();
   initData.restore();
-  mainButton.mount();
-  secondaryButton.mount();
+
   void viewport
     .mount()
     .catch(e => {
