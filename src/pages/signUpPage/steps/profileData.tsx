@@ -13,6 +13,8 @@ const ProfileDataStep = () => {
     >
         <Section
             header={t("name")}
+            footer={t("min_max_2_18")}
+
         >
 
             <Input
@@ -24,6 +26,8 @@ const ProfileDataStep = () => {
 
         <Section
             header={t("Bio")}
+            footer={t("min_max_2_100")}
+
         >
             <Textarea header={t("Bio")} placeholder={t("bio_placeholder")} />
         </Section>
@@ -31,7 +35,6 @@ const ProfileDataStep = () => {
         <Section
             header={t('Workandeducation')}
             footer={t("Selectedplancanbechangedatanytime")}
-
         >
             <Input
                 header={t("Education")}
