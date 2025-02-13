@@ -24,8 +24,18 @@ const MainButton: React.FC<MainButtonProps> = ({
 }) => {
 
   useEffect(() => {
-    // Set button parameters if setParams is available
+    console.log('Setting main button parameters:', {
+      backgroundColor,
+      hasShineEffect,
+      isEnabled,
+      isLoaderVisible,
+      isVisible,
+      text,
+      textColor,
+    });
+
     if (mainButton.setParams.isAvailable()) {
+      console.log('mainButton.setParams is available, setting parameters...');
       mainButton.setParams({
         backgroundColor,
         hasShineEffect,
@@ -35,18 +45,22 @@ const MainButton: React.FC<MainButtonProps> = ({
         text,
         textColor,
       });
+    } else {
+      console.warn('mainButton.setParams is NOT available.');
     }
   }, [backgroundColor, hasShineEffect, isEnabled, isLoaderVisible, isVisible, text, textColor]);
 
   useEffect(() => {
     if (onClick && mainButton.onClick.isAvailable()) {
-      // Bind the click listener
+      console.log('Attaching mainButton onClick listener...');
       mainButton.onClick(onClick);
 
       return () => {
-        // Unbind the click listener
+        console.log('Removing mainButton onClick listener...');
         mainButton.offClick(onClick);
       };
+    } else {
+      console.warn('mainButton.onClick is NOT available or no onClick handler provided.');
     }
   }, [onClick]);
 

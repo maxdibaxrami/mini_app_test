@@ -25,10 +25,20 @@ const SecondaryButton: React.FC<SecondaryButtonProps> = ({
   onClick,
 }) => {
 
-
   useEffect(() => {
-    // Set secondary button parameters
+    console.log('Setting secondary button parameters:', {
+      backgroundColor,
+      hasShineEffect,
+      isEnabled,
+      isLoaderVisible,
+      isVisible,
+      position,
+      text,
+      textColor,
+    });
+
     if (secondaryButton.setParams.isAvailable()) {
+      console.log('secondaryButton.setParams is available, setting parameters...');
       secondaryButton.setParams({
         backgroundColor,
         hasShineEffect,
@@ -39,18 +49,22 @@ const SecondaryButton: React.FC<SecondaryButtonProps> = ({
         text,
         textColor,
       });
+    } else {
+      console.warn('secondaryButton.setParams is NOT available.');
     }
   }, [backgroundColor, hasShineEffect, isEnabled, isLoaderVisible, isVisible, position, text, textColor]);
 
   useEffect(() => {
     if (onClick && secondaryButton.onClick.isAvailable()) {
-      // Bind the click listener
+      console.log('Attaching secondaryButton onClick listener...');
       secondaryButton.onClick(onClick);
 
       return () => {
-        // Unbind the click listener when component unmounts
+        console.log('Removing secondaryButton onClick listener...');
         secondaryButton.offClick(onClick);
       };
+    } else {
+      console.warn('secondaryButton.onClick is NOT available or no onClick handler provided.');
     }
   }, [onClick]);
 

@@ -2,6 +2,7 @@ import { defineConfig } from 'vite';
 import tsconfigPaths from 'vite-tsconfig-paths';
 import react from '@vitejs/plugin-react-swc';
 import tailwindcss from '@tailwindcss/vite'
+import { resolve } from 'node:path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -24,5 +25,11 @@ export default defineConfig({
     // Exposes your dev server and makes it accessible for the devices in the same network.
     host: true,
   },
+
+  resolve: {
+    alias: {
+      '@telegram-apps/sdk': resolve('node_modules/@telegram-apps/sdk/src'),
+    },
+  }
 });
 
