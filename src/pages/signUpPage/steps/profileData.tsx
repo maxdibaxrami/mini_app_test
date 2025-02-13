@@ -24,12 +24,6 @@ const ProfileDataStep = () => {
 
         </Section>
 
-        <Section
-            header={`${t("Iam")}`}
-            style={{
-                marginBottom:0,
-            }}
-        >
             <div
                 style={{
                     display: 'flex',
@@ -46,7 +40,6 @@ const ProfileDataStep = () => {
                     {t("Female")}
                 </Chip>
             </div>
-        </Section>
 
         <Section
             header={t("Bio")}
