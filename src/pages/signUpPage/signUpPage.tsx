@@ -8,6 +8,7 @@ import ProfileDataStep from './steps/profileData';
 import MainButton from '@/lib/MainButton';
 import SecondaryButton from '@/lib/SecondaryButton';
 
+
 export const SignUpPage = () => {
 
   const { t } = useTranslation();
@@ -19,6 +20,14 @@ export const SignUpPage = () => {
     setSelectedTab((prevTab) => {
       console.log("After PreviousTab (updated):", prevTab - 1); // Log expected new value
       return prevTab - 1;
+    });
+  };
+
+  const NextTab = () => {
+    console.log("Before NextYab:", selectedTab); // Log before update
+    setSelectedTab((prevTab) => {
+      console.log("After NextYab (updated):", prevTab + 1); // Log expected new value
+      return prevTab + 1;
     });
   };
 
@@ -36,21 +45,29 @@ export const SignUpPage = () => {
         {selectedTab === 0 && <LanguageStep/>}
         {selectedTab === 1 && <ProfileDataStep/>}
         
+        <MainButton
+          text={t('Next')}
+          backgroundColor="#FF5733"
+          textColor="#FFFFFF"
+          hasShineEffect={true}
+          isEnabled={true}
+          isLoaderVisible={false}
+          isVisible={true}
+          onClick={NextTab}
+        />
 
-      <MainButton 
-        disabled={selectedTab >= 10} // Prevent exceeding 10
-        onClick={()=>{
-          console.log("desa")
-        }} 
-        text={t('Next')} 
-      />
+        <SecondaryButton
+          text={t('previous')}
+          backgroundColor="#FF5733"
+          textColor="#FFFFFF"
+          hasShineEffect={true}
+          isEnabled={true}
+          isLoaderVisible={false}
+          isVisible={true}
+          position="bottom"
+          onClick={PreviousTab}
+        />
 
-      <SecondaryButton 
-        disabled={selectedTab <= 0} // Prevent going below 0
-        onClick={PreviousTab} 
-        text={t('Previous')} 
-        position="left" 
-      />
     </Page>
   );
 };
