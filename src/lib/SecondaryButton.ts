@@ -21,7 +21,7 @@ const SecondaryButton: React.FC<SecondaryButtonProps> = ({
   isEnabled = true,
   isLoaderVisible = false,
   isVisible = true,
-  position = 'bottom',          // Default position
+  position = 'left',          // Default position
   onClick,
 }) => {
 
