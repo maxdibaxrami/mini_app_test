@@ -1,5 +1,5 @@
 import {  Steps } from '@telegram-apps/telegram-ui';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Page } from '@/components/Page.tsx';
 import { SparklesText } from '@/components/sparkiText/sparkiText';
 import LanguageStep from './steps/lagnuageStep';
@@ -13,14 +13,7 @@ export const SignUpPage = () => {
   const { t } = useTranslation();
   const [selectedTab, setSelectedTab] = useState(0)
 
-  const NextTab = () => {
-    console.log("Before NextTab:", selectedTab); // Log before update
-    setSelectedTab((prevTab) => {
-      console.log("After NextTab (updated):", prevTab + 1); // Log expected new value
-      return prevTab + 1;
-    });
-  };
-  
+
   const PreviousTab = () => {
     console.log("Before PreviousTab:", selectedTab); // Log before update
     setSelectedTab((prevTab) => {
