@@ -113,13 +113,10 @@ const SecondaryButton = ({
       return;
     }
     console.log("Attaching click handler");
-    secondaryButton?.onClick(() => {
-      console.log('MainButton clicked');
-      onClick();
-    });
+    secondaryButton?.onClick(onClick);
+
     return () => {
       console.log("Removing click handler");
-
         secondaryButton?.offClick(onClick);
     };
   }, [onClick, secondaryButton]);

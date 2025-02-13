@@ -110,13 +110,10 @@ const MainButton = ({
       return;
     }
 
-    MainButton?.onClick(() => {
-    console.log('MainButton clicked');
-    onClick();
-  });
+    MainButton.onClick(onClick);
     return () => {
       console.log("Removing click handler");
-      MainButton?.offClick(onClick);
+      MainButton.offClick(onClick);
     };
   }, [onClick, MainButton]);
 
