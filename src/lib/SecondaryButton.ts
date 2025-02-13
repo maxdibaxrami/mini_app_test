@@ -25,19 +25,6 @@ const SecondaryButton: React.FC<SecondaryButtonProps> = ({
   onClick,
 }) => {
 
-  useEffect(() => {
-    // Check if Secondary Button is supported and mount if available
-    if (secondaryButton.isSupported() && secondaryButton.mount.isAvailable()) {
-      secondaryButton.mount();
-    }
-
-    return () => {
-      // Unmount when component is destroyed
-      if (secondaryButton.isMounted()) {
-        secondaryButton.unmount();
-      }
-    };
-  }, []);
 
   useEffect(() => {
     // Set secondary button parameters

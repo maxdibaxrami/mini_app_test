@@ -24,20 +24,6 @@ const MainButton: React.FC<MainButtonProps> = ({
 }) => {
 
   useEffect(() => {
-    // Mount the main button if available
-    if (mainButton.mount.isAvailable()) {
-      mainButton.mount();
-    }
-
-    return () => {
-      // Unmount when the component is unmounted
-      if (mainButton.isMounted()) {
-        mainButton.unmount();
-      }
-    };
-  }, []);
-
-  useEffect(() => {
     // Set button parameters if setParams is available
     if (mainButton.setParams.isAvailable()) {
       mainButton.setParams({
