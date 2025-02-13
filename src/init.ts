@@ -3,9 +3,7 @@ import {
   viewport,
   themeParams,
   miniApp,
-  mainButton,
   initData,
-  secondaryButton,
   $debug,
   init as initSDK,
 } from '@telegram-apps/sdk-react';
