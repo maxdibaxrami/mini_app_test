@@ -25,6 +25,8 @@ const MainButton: React.FC<MainButtonProps> = ({
 
   useEffect(() => {
     // Mount the main button if available
+    console.log("111")
+
     if (mainButton.mount.isAvailable()) {
       mainButton.mount();
     }
@@ -39,6 +41,8 @@ const MainButton: React.FC<MainButtonProps> = ({
 
   useEffect(() => {
     // Set button parameters if setParams is available
+    console.log("111")
+
     if (mainButton.setParams.isAvailable()) {
       mainButton.setParams({
         backgroundColor,
