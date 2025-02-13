@@ -1,5 +1,5 @@
 import {  Steps } from '@telegram-apps/telegram-ui';
-import { useEffect, useState, type FC } from 'react';
+import { useEffect, useState } from 'react';
 import { Page } from '@/components/Page.tsx';
 import { SparklesText } from '@/components/sparkiText/sparkiText';
 import LanguageStep from './steps/lagnuageStep';
@@ -8,7 +8,7 @@ import ProfileDataStep from './steps/profileData';
 import MainButton from '@/lib/MainButton';
 import SecondaryButton from '@/lib/SecondaryButton';
 
-export const SignUpPage: FC = () => {
+export const SignUpPage = () => {
 
   const { t } = useTranslation();
   const [selectedTab, setSelectedTab] = useState(0)
@@ -29,6 +29,21 @@ export const SignUpPage: FC = () => {
     });
   };
 
+  useEffect(() => {
+    // @ts-ignore
+    const WebApp = window.Telegram?.WebApp;
+  
+    if (WebApp?.MainButton) {
+      WebApp.MainButton.onClick(() => {
+        NextTab();
+      });
+    }
+  
+    return () => {
+      WebApp?.MainButton?.offClick();
+    };
+  }, [selectedTab]);
+
   useEffect(()=>{console.log(selectedTab)},[selectedTab])
 
   return (
@@ -46,16 +61,15 @@ export const SignUpPage: FC = () => {
         {selectedTab === 1 && <ProfileDataStep/>}
         
 
-
       <MainButton 
         disabled={selectedTab >= 10} // Prevent exceeding 10
-        onClick={()=> NextTab()} 
+        onClick={NextTab} 
         text={t('Next')} 
       />
 
       <SecondaryButton 
         disabled={selectedTab <= 0} // Prevent going below 0
-        onClick={()=> PreviousTab()} 
+        onClick={PreviousTab} 
         text={t('Previous')} 
         position="left" 
       />

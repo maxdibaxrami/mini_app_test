@@ -117,7 +117,7 @@ const SecondaryButton = ({
 
     return () => {
       console.log("Removing click handler");
-        secondaryButton?.offClick(onClick);
+      secondaryButton?.offClick(onClick);
     };
   }, [onClick, secondaryButton]);
 
