@@ -24,18 +24,22 @@ const MainButton: React.FC<MainButtonProps> = ({
 }) => {
 
   useEffect(() => {
-    console.log('Setting main button parameters:', {
-      backgroundColor,
-      hasShineEffect,
-      isEnabled,
-      isLoaderVisible,
-      isVisible,
-      text,
-      textColor,
-    });
+    // Mount the main button if available
+    if (mainButton.mount.isAvailable()) {
+      mainButton.mount();
+    }
 
-    if (mainButton) {
-      console.log('mainButton.setParams is available, setting parameters...');
+    return () => {
+      // Unmount when the component is unmounted
+      if (mainButton.isMounted()) {
+        mainButton.unmount();
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    // Set button parameters if setParams is available
+    if (mainButton.setParams.isAvailable()) {
       mainButton.setParams({
         backgroundColor,
         hasShineEffect,
@@ -45,22 +49,18 @@ const MainButton: React.FC<MainButtonProps> = ({
         text,
         textColor,
       });
-    } else {
-      console.warn('mainButton.setParams is NOT available.');
     }
   }, [backgroundColor, hasShineEffect, isEnabled, isLoaderVisible, isVisible, text, textColor]);
 
   useEffect(() => {
-    if (onClick && mainButton) {
-      console.log('Attaching mainButton onClick listener...');
+    if (onClick && mainButton.onClick.isAvailable()) {
+      // Bind the click listener
       mainButton.onClick(onClick);
 
       return () => {
-        console.log('Removing mainButton onClick listener...');
+        // Unbind the click listener
         mainButton.offClick(onClick);
       };
-    } else {
-      console.warn('mainButton.onClick is NOT available or no onClick handler provided.');
     }
   }, [onClick]);
 
