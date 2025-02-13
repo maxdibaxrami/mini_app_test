@@ -71,7 +71,7 @@ const MainButton = ({
   const disabled = disable_old || disable_new;
 
   console.log('WebApp instance:', WebApp);
-
+  MainButton?.mount()
   useEffect(() => {
     MainButton?.setParams({
       color: color || themeParams?.button_color || '#fff',
