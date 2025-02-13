@@ -34,7 +34,7 @@ const MainButton: React.FC<MainButtonProps> = ({
       textColor,
     });
 
-    if (mainButton.setParams.isAvailable()) {
+    if (mainButton) {
       console.log('mainButton.setParams is available, setting parameters...');
       mainButton.setParams({
         backgroundColor,
@@ -51,7 +51,7 @@ const MainButton: React.FC<MainButtonProps> = ({
   }, [backgroundColor, hasShineEffect, isEnabled, isLoaderVisible, isVisible, text, textColor]);
 
   useEffect(() => {
-    if (onClick && mainButton.onClick.isAvailable()) {
+    if (onClick && mainButton) {
       console.log('Attaching mainButton onClick listener...');
       mainButton.onClick(onClick);
 

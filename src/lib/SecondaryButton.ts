@@ -37,7 +37,7 @@ const SecondaryButton: React.FC<SecondaryButtonProps> = ({
       textColor,
     });
 
-    if (secondaryButton.setParams.isAvailable()) {
+    if (secondaryButton) {
       console.log('secondaryButton.setParams is available, setting parameters...');
       secondaryButton.setParams({
         backgroundColor,
@@ -55,7 +55,7 @@ const SecondaryButton: React.FC<SecondaryButtonProps> = ({
   }, [backgroundColor, hasShineEffect, isEnabled, isLoaderVisible, isVisible, position, text, textColor]);
 
   useEffect(() => {
-    if (onClick && secondaryButton.onClick.isAvailable()) {
+    if (onClick && secondaryButton) {
       console.log('Attaching secondaryButton onClick listener...');
       secondaryButton.onClick(onClick);
 

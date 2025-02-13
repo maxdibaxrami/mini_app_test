@@ -37,7 +37,7 @@ export function init(debug: boolean): void {
   themeParams.mount();
   initData.restore();
   mainButton.mount();
-  secondaryButton.mount()
+  secondaryButton.mount();
   void viewport
     .mount()
     .catch(e => {
