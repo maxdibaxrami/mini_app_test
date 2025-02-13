@@ -353,6 +353,11 @@
     "min_max_2_100":"Minimum enter 2 characters and maximum 100",
     "access_to_location":"Access to location",
     "location_access_prompt":"Please make sure to grant location access at least once for the app functionality to work properly.",
-    "description_for_energy": "In our app, Energy allows users to engage with others in meaningful ways. Users can use their Energy to send messages to anyone in the app or give gifts to friends, enhancing their interactions. Additionally, when users refer new friends to the app, both the referrer and the referred user will receive bonus Energy as a reward, making it easier to connect and share with others. This system encourages users to stay active, invite friends, and enjoy even more rewarding experiences."
+    "description_for_energy": "In our app, Energy allows users to engage with others in meaningful ways. Users can use their Energy to send messages to anyone in the app or give gifts to friends, enhancing their interactions. Additionally, when users refer new friends to the app, both the referrer and the referred user will receive bonus Energy as a reward, making it easier to connect and share with others. This system encourages users to stay active, invite friends, and enjoy even more rewarding experiences.",
+    "name_placeholder": "Enter your full name",
+    "bio_placeholder": "Tell us a little about yourself",
+    "education_placeholder": "Enter your highest education level",
+    "work_placeholder": "Enter your current job or profession"
+    
   }
   

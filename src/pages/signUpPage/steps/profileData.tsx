@@ -12,27 +12,38 @@ const ProfileDataStep = () => {
         }}
     >
         <Section
-        footer="The official Telegram app is available for Android, iPhone, iPad, Windows, macOS and Linux."
-        header="Personal Information"
+            header={t("name")}
         >
+
             <Input
                 header={t("name")}
-                placeholder="21 y.o. designer from San Francisco"
+                placeholder={t("name_placeholder")}
             />
 
-            <Textarea header={t("Bio")} placeholder="I am usual textarea" />
+        </Section>
 
+        <Section
+            header={t("Bio")}
+        >
+            <Textarea header={t("Bio")} placeholder={t("bio_placeholder")} />
+        </Section>
+
+        <Section
+            header={t('Workandeducation')}
+            footer={t("Selectedplancanbechangedatanytime")}
+
+        >
             <Input
                 header={t("Education")}
-                placeholder="21 y.o. designer from San Francisco"
+                placeholder={t("education_placeholder")}
             />
 
             <Input
                 header={t("work")}
-                placeholder="21 y.o. designer from San Francisco"
+                placeholder={t("work_placeholder")}
             />
-
         </Section>
+
   </List>
 
 }
