@@ -29,23 +29,6 @@ export const SignUpPage = () => {
     });
   };
 
-  useEffect(() => {
-    // @ts-ignore
-    const WebApp = window.Telegram?.WebApp;
-  
-    if (WebApp?.MainButton) {
-      WebApp.MainButton.onClick(() => {
-        NextTab();
-      });
-    }
-  
-    return () => {
-      WebApp?.MainButton?.offClick();
-    };
-  }, [selectedTab]);
-
-  useEffect(()=>{console.log(selectedTab)},[selectedTab])
-
   return (
     <Page back={true}>
       <div className='safe-area-top top-bar-height flex items-center justify-center'>
@@ -63,7 +46,9 @@ export const SignUpPage = () => {
 
       <MainButton 
         disabled={selectedTab >= 10} // Prevent exceeding 10
-        onClick={NextTab} 
+        onClick={()=>{
+          console.log("desa")
+        }} 
         text={t('Next')} 
       />
 
