@@ -45,8 +45,11 @@ export const SignUpPage = () => {
         </div>
        </div>
         
-        {selectedTab === 0 && <LanguageStep/>}
-        {selectedTab === 1 && <ProfileDataStep/>}
+        <div className='main-content-safe'>
+          {selectedTab === 0 && <LanguageStep/>}
+          {selectedTab === 1 && <ProfileDataStep/>}
+        </div>
+
         
         <MainButton
           text={t('Next')}

@@ -14,3 +14,7 @@ body {
 .top-bar-height{
   height: var(--tg-viewport-content-safe-area-inset-top);
 }
+
+.main-content-safe{
+  margin-top: calc(var(--tg-viewport-safe-area-inset-top) + var(--tg-viewport-content-safe-area-inset-top) + 10);
+}

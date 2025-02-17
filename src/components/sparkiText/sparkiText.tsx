@@ -62,7 +62,7 @@ const SparklesText: React.FC<SparklesTextProps> = ({
   text,
   colors = { first: "#1FB6A8", second: "#F59E0B" },
   className,
-  sparklesCount = 10,
+  sparklesCount = 20,
   ...props
 }) => {
   const [sparkles, setSparkles] = useState<Sparkle[]>([]);
