@@ -14,18 +14,17 @@ const WorkAndEducationStep = () => {
     const onChange = (e:any) => {
         setSelectedValue(e.target.value)
     }
-    return <List
-            style={{
-            background: 'var(--tgui--secondary_bg_color)',
-        }}
-    >
+    return <List>
         <div style={{display:"flex", alignItems:"center",justifyContent:"center",width:"100%"}}>
            <WorkAndEducationStepSVG/>
         </div>
 
         <Section
             header={t("work")}
-            style={{marginBottom:0}}
+            style={{
+                marginBottom:0,
+                background: 'var(--tgui--secondary_bg_color)',
+            }}
 
         >
             <Input
@@ -37,6 +36,10 @@ const WorkAndEducationStep = () => {
           <Section
                     footer={t('Selectedplancanbechangedatanytime')}
                     header={t('Selectlanguageforcontinue')}
+                    style={{
+                        marginBottom:0,
+                        background: 'var(--tgui--secondary_bg_color)',
+                    }}
                 >
                      <form>
                         {education.map((value,index)=>{

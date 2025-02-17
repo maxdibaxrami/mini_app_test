@@ -13,9 +13,7 @@ const LanguageStep = () => {
         setSelectedValue(e.target.value)
     }
     return <List
-        style={{
-        background: 'var(--tgui--secondary_bg_color)',
-    }}
+       
     >
         <div style={{display:"flex", alignItems:"center",justifyContent:"center",width:"100%"}}>
             <LanguageStepSVG/>
@@ -24,6 +22,9 @@ const LanguageStep = () => {
         <Section
             footer={t('Selectedplancanbechangedatanytime')}
             header={t('Selectlanguageforcontinue')}
+            style={{
+                background: 'var(--tgui--secondary_bg_color)',
+            }}
         >
              <form>
                 <Cell Component="label" description="English" before={<Selectable defaultChecked checked={selectedValue === "en"} onClick={onChange} name="group" value="en" />} multiline>

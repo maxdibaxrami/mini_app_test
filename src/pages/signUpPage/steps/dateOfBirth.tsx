@@ -8,16 +8,16 @@ import { DateOfBirth } from "../svg/dateOfBirthStepSVG";
 const DateOfBirthStep = () => {
     const { t } = useTranslation();
 
-    return <List
-        style={{
-        background: 'var(--tgui--secondary_bg_color)',
-        }}
-    >
+    return <List>
           <div style={{display:"flex", alignItems:"center",justifyContent:"center",width:"100%"}}>
                    <DateOfBirth/>
            </div>
         
-        <Section header={t("Selectdateofbirth")}>
+        <Section
+        style={{
+            background: 'var(--tgui--secondary_bg_color)',
+            }}
+        header={t("Selectdateofbirth")}>
             <DatePicker/>
         </Section>
   </List>
