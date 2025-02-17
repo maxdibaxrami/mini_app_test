@@ -12,7 +12,7 @@ const ProfileDataStep = () => {
         }}
     >
         <Section
-            header={t("name")}
+            header={t("Fillprofiledata")}
             style={{marginBottom:0}}
 
         >
