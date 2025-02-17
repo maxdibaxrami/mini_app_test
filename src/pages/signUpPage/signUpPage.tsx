@@ -45,7 +45,7 @@ export const SignUpPage = () => {
         </div>
        </div>
         
-        <div className='main-content-safe mt-4'>
+        <div className='main-content-safe mt-4 '>
           {selectedTab === 0 && <LanguageStep/>}
           {selectedTab === 1 && <ProfileDataStep/>}
         </div>

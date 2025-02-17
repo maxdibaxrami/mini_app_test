@@ -1,4 +1,5 @@
 
+import DatePicker from "@/components/DateTimePicker";
 import { List, Section, Input, Textarea, Chip, Radio } from "@telegram-apps/telegram-ui"
 import { useTranslation } from "react-i18next";
 
@@ -37,7 +38,12 @@ const ProfileDataStep = () => {
                 <Chip mode="elevated" Component="label" before={<Radio name="Female" />}>
                     {t("Female")}
                 </Chip>
-            </div>
+        </div>
+
+        <Section header={t("Selectdateofbirth")}>
+            <DatePicker/>
+        </Section>
+
 
 
   </List>
