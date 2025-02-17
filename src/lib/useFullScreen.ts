@@ -29,6 +29,7 @@ export const useViewportFullscreen = (): UseViewportFullscreen => {
   }, []);
 
   const enableFullscreen = async () => {
+    console.log('enableFullscreen');
     if (viewport.requestFullscreen.isAvailable()) {
       await viewport.requestFullscreen();
       setIsFullscreen(viewport.isFullscreen());
