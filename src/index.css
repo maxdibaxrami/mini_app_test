@@ -16,5 +16,5 @@ body {
 }
 
 .main-content-safe{
-  margin-top: calc(var(--tg-viewport-safe-area-inset-top) + var(--tg-viewport-content-safe-area-inset-top) + 10);
+  padding-top: calc(var(--tg-viewport-safe-area-inset-top) + var(--tg-viewport-content-safe-area-inset-top));
 }
