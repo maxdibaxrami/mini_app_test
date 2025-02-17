@@ -7,6 +7,7 @@ import { useTranslation } from 'react-i18next';
 import ProfileDataStep from './steps/profileData';
 import MainButton from '@/lib/MainButton';
 import SecondaryButton from '@/lib/SecondaryButton';
+import DateOfBirthStep from './steps/dateOfBirth';
 
 
 export const SignUpPage = () => {
@@ -48,6 +49,9 @@ export const SignUpPage = () => {
         <div className='main-content-safe mt-6 '>
           {selectedTab === 0 && <LanguageStep/>}
           {selectedTab === 1 && <ProfileDataStep/>}
+          {selectedTab === 2 && <DateOfBirthStep/>}
+
+          
         </div>
 
         
