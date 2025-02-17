@@ -9,7 +9,6 @@ import { initializeI18n } from '@/initializeI18n';
 
 import i18next from 'i18next';
 import { I18nextProvider } from 'react-i18next';
-import useFullscreen from '@/lib/useFullScreen';
 
 
 
@@ -18,12 +17,10 @@ export function App() {
   const lp = useLaunchParams();
   const isDark = useSignal(miniApp.isDark);
 
-  const [isFullscreen, toggleFullscreen] = useFullscreen();
   
 
   useEffect(() => {
-    toggleFullscreen()
-    console.log(isFullscreen)
+
     const loadI18n = async () => {
       await initializeI18n();
       const currentLang = i18next.language;

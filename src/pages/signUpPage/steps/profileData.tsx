@@ -24,7 +24,9 @@ const ProfileDataStep = () => {
 
             <Textarea header={t("Bio")} placeholder={t("bio_placeholder")} />
 
-            <div
+        </Section>
+
+        <div
                 className="grid gap-2 grid-cols-2 py-2"
 
             >
@@ -36,8 +38,6 @@ const ProfileDataStep = () => {
                     {t("Female")}
                 </Chip>
             </div>
-
-        </Section>
 
 
   </List>

@@ -50,5 +50,6 @@ export function init(debug: boolean): void {
 
   // Define components-related CSS variables.
   miniApp.bindCssVars();
+  viewport.requestFullscreen();
   themeParams.bindCssVars();
 }
