@@ -14,9 +14,7 @@ const DateOfBirthStep = () => {
            </div>
         
         <Section
-        style={{
-            background: 'var(--tgui--secondary_bg_color)',
-            }}
+        
         header={t("Selectdateofbirth")}>
             <DatePicker/>
         </Section>

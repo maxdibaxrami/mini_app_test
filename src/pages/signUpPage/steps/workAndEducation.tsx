@@ -23,7 +23,6 @@ const WorkAndEducationStep = () => {
             header={t("work")}
             style={{
                 marginBottom:0,
-                background: 'var(--tgui--secondary_bg_color)',
             }}
 
         >
@@ -38,7 +37,6 @@ const WorkAndEducationStep = () => {
                     header={t('Selectlanguageforcontinue')}
                     style={{
                         marginBottom:0,
-                        background: 'var(--tgui--secondary_bg_color)',
                     }}
                 >
                      <form>

@@ -56,20 +56,20 @@ export function init(debug: boolean): void {
   // Bind color pattern to CSS variables
   const root = document.documentElement;
   const themeColors = {
-    "--tg-theme-accent-text-color": "#1FB6A8", // Primary accent color
+    "--tg-theme-accent-text-color": "#1FB6A8", // Primary accent color (calm turquoise)
     "--tg-theme-bg-color": "#000000", // Full black background
-    "--tg-theme-button-color": "#1FB6A8", // Button color matching primary accent
-    "--tg-theme-button-text-color": "#ffffff", // Button text color (white for contrast)
-    "--tg-bottom-bar-color": "#0d0d0d", // Darker black for bottom bar
-    "--tg-theme-destructive-text-color": "#ec3942", // Destructive action color (e.g., red for delete actions)
-    "--tg-theme-header-bg-color": "#0d0d0d", // Slightly lighter black for headers
-    "--tg-theme-hint-color": "#a0a0a0", // Grey hint color for secondary text or hints
-    "--tg-theme-link-color": "#1FB6A8", // Link color matching primary accent
-    "--tg-theme-secondary-bg-color": "#0f0f0f", // Darker grey for secondary background
-    "--tg-theme-section-bg-color": "#1b1b1b", // Slightly lighter grey for sections
-    "--tg-theme-section-header-text-color": "#1FB6A8", // Section header text color matching accent
-    "--tg-theme-subtitle-text-color": "#a0a0a0", // Subtitle text in grey for contrast
-    "--tg-theme-text-color": "#f5f5f5" // Main text color (white for contrast)
+    "--tg-theme-button-color": "#FF5A5F", // Button color (inviting red/pink for warmth)
+    "--tg-theme-button-text-color": "#ffffff", // Button text color (white for readability)
+    "--tg-bottom-bar-color": "#333333", // Dark grey for bottom bar (softens the black)
+    "--tg-theme-destructive-text-color": "#FF3B30", // Bright red for destructive actions
+    "--tg-theme-header-bg-color": "#1A1A1A", // Dark grey for the header (contrast but subtle)
+    "--tg-theme-hint-color": "#B0B0B0", // Light grey for hint text
+    "--tg-theme-link-color": "#1FB6A8", // Links matching the primary accent color
+    "--tg-theme-secondary-bg-color": "#121212", // Dark grey for secondary backgrounds
+    "--tg-theme-section-bg-color": "#1C1C1C", // Slightly lighter grey for sections
+    "--tg-theme-section-header-text-color": "#1FB6A8", // Section header text color (matches accent)
+    "--tg-theme-subtitle-text-color": "#A8A8A8", // Subtitle text in light grey
+    "--tg-theme-text-color": "#ffffff" // Main text color (white for readability)
   };
   
 

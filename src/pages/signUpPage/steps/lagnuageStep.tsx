@@ -17,7 +17,6 @@ const LanguageStep = () => {
     
     return <List
         style={{
-            backgroundColor:"#000000",
             height:"100%"
         }}
     >
