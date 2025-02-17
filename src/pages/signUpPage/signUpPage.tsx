@@ -8,12 +8,13 @@ import ProfileDataStep from './steps/profileData';
 import MainButton from '@/lib/MainButton';
 import SecondaryButton from '@/lib/SecondaryButton';
 import DateOfBirthStep from './steps/dateOfBirth';
+import WorkAndEducationStep from './steps/workAndEducation';
 
 
 export const SignUpPage = () => {
 
   const { t } = useTranslation();
-  const [selectedTab, setSelectedTab] = useState(0)
+  const [selectedTab, setSelectedTab] = useState(3)
 
 
   const PreviousTab = () => {
@@ -50,7 +51,9 @@ export const SignUpPage = () => {
           {selectedTab === 0 && <LanguageStep/>}
           {selectedTab === 1 && <ProfileDataStep/>}
           {selectedTab === 2 && <DateOfBirthStep/>}
+          {selectedTab === 3 && <WorkAndEducationStep/>}
 
+          
           
         </div>
 
