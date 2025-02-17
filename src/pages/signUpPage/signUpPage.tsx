@@ -57,7 +57,7 @@ export const SignUpPage = () => {
         
         <MainButton
           text={t('Next')}
-          backgroundColor="#FF5733"
+          backgroundColor="#1FB6A8"
           textColor="#FFFFFF"
           hasShineEffect={true}
           isEnabled={true}
@@ -68,9 +68,9 @@ export const SignUpPage = () => {
 
         <SecondaryButton
           text={t('previous')}
-          backgroundColor="#FF5733"
-          textColor="#FFFFFF"
-          hasShineEffect={true}
+          backgroundColor="#FFFFFF"
+          textColor="#000000"
+          hasShineEffect={false}
           isEnabled={true}
           isLoaderVisible={false}
           isVisible={true}
