@@ -78,9 +78,10 @@ const Wheel: React.FC<WheelProps> = (props) => {
         transform: `rotateX(${rotate}deg) translateZ(${radius}px)`,
         WebkitTransform: `rotateX(${rotate}deg) translateZ(${radius}px)`,
       }
+      // Add 1 to i to start the value from 1 instead of 0
       const value = props.setValue
-        ? props.setValue(i, sliderState.abs + Math.round(distance))
-        : i
+        ? props.setValue(i + 1, sliderState.abs + Math.round(distance)) // i + 1 to start from 1
+        : i + 1 // i + 1 to start from 1
       values.push({ style, value })
     }
     return values

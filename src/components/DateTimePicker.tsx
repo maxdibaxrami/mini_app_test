@@ -2,9 +2,14 @@ import { format, subDays } from "date-fns"
 import Wheel from "./wheel"
 
 export default () => {
-  function formateDate(_relative:any, absolute:any) {
-    return format(subDays(new Date(), absolute), "iii d LLL")
-  }
+
+    const currentYear = new Date().getFullYear() - 18
+    const years = Array.from({ length: 100 }, (_, i) => currentYear - i)
+  
+    function formatYear(_relative: any, absolute: any) {
+      return years[absolute]
+    }
+
   return (
     <div
       style={{
@@ -14,20 +19,19 @@ export default () => {
         alignItems: "center",
       }}
     >
-      <div style={{ width: 180, height: 180 }}>
+      <div style={{ width: "40%", height: 180 }}>
         <Wheel
           loop
-          length={100}
+          length={years.length}
           width={140}
-          perspective="right"
-          setValue={formateDate}
+          setValue={formatYear}
         />
       </div>
-      <div style={{ width: 70, height: 180 }}>
+      <div style={{ width: "30%", height: 180 }}>
         <Wheel loop length={12} width={23} />
       </div>
-      <div style={{ width: 70, height: 180 }}>
-        <Wheel loop length={12} width={23} perspective="left" />
+      <div style={{ width: "30%", height: 180 }}>
+        <Wheel loop length={12} width={23} />
       </div>
     </div>
   )
