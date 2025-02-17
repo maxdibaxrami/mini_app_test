@@ -40,7 +40,7 @@ const WorkAndEducationStep = () => {
                 >
                      <form>
                         {education.map((value,index)=>{
-                            return <Cell key={index} Component="label" description="English" before={<Selectable defaultChecked checked={selectedValue === value.key} onClick={onChange} name="group" value={value.label} />} multiline>
+                            return <Cell key={index} Component="label" before={<Selectable defaultChecked checked={selectedValue === value.key} onClick={onChange} name="group" value={value.key} />} multiline>
                                         {t(value.label)}
                                     </Cell>
                         })}
