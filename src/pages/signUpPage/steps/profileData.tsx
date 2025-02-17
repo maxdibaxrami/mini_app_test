@@ -17,13 +17,11 @@ const ProfileDataStep = () => {
             style={{marginBottom:0}}
 
         >
-
             <Input
-                header={t("name")}
                 placeholder={t("name_placeholder")}
             />
 
-            <Textarea header={t("Bio")} placeholder={t("bio_placeholder")} />
+            <Textarea placeholder={t("bio_placeholder")} />
 
         </Section>
 
