@@ -1,13 +1,11 @@
 
-import { List, Section } from "@telegram-apps/telegram-ui"
+import { List } from "@telegram-apps/telegram-ui"
 import { useState } from "react";
-import { useTranslation } from "react-i18next";
 import { LanguageStepSVG } from "../svg/languageStepSVG";
 import { LanguageWheel, languages, Language } from "@/components/langaugeWheel";
 
 
 const LanguageStep = () => {
-    const { t } = useTranslation();
     const [selectedLanguage, setSelectedLanguage] = useState<Language>(languages[0]);
 
     const handleLanguageChange = (index: number, language: Language) => {
@@ -23,14 +21,7 @@ const LanguageStep = () => {
             <LanguageStepSVG/>
         </div>
 
-        <Section
-            footer={t('Selectedplancanbechangedatanytime')}
-            header={t('Selectlanguageforcontinue')}
-            style={{
-                background: 'var(--tgui--secondary_bg_color)',
-            }}
-        >
-                <div
+            <div
                 style={{
                     height: "240px",
                     display: "flex",
@@ -38,7 +29,7 @@ const LanguageStep = () => {
                     alignItems: "center",
                 }}
                 >
-                <div style={{ width: "40%", height: 180 }}>
+                <div style={{ width: "100%", height: 180 }}>
                         <LanguageWheel
                             perspective="center"
                             length={languages.length}
@@ -47,7 +38,6 @@ const LanguageStep = () => {
                         />
                     </div>
             </div>
-        </Section>
     </List>
 
 }
