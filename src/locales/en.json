@@ -357,7 +357,13 @@
     "name_placeholder": "Enter your full name",
     "bio_placeholder": "Tell us a little about yourself",
     "education_placeholder": "Enter your highest education level",
-    "work_placeholder": "Enter your current job or profession"
+    "work_placeholder": "Enter your current job or profession",
+
+
+
+    "year":"Year",
+    "day":"Day",
+    "month":"Month"
     
   }
   
