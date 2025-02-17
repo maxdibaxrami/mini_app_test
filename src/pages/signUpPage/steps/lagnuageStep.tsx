@@ -3,17 +3,18 @@ import { List, Cell, Section, Selectable } from "@telegram-apps/telegram-ui"
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { LanguageStepSVG } from "../svg/languageStepSVG";
+import { LanguageWheel, languages, Language } from "@/components/langaugeWheel";
 
 
 const LanguageStep = () => {
     const { t } = useTranslation();
-    const [selectedValue , setSelectedValue ] = useState<string>('en')
+    const [selectedLanguage, setSelectedLanguage] = useState<Language>(languages[0]);
 
-    const onChange = (e:any) => {
-        setSelectedValue(e.target.value)
-    }
+    const handleLanguageChange = (index: number, language: Language) => {
+      setSelectedLanguage(language);
+    };
+    
     return <List
-       
     >
         <div style={{display:"flex", alignItems:"center",justifyContent:"center",width:"100%"}}>
             <LanguageStepSVG/>
@@ -26,20 +27,23 @@ const LanguageStep = () => {
                 background: 'var(--tgui--secondary_bg_color)',
             }}
         >
-             <form>
-                <Cell Component="label" description="English" before={<Selectable defaultChecked checked={selectedValue === "en"} onClick={onChange} name="group" value="en" />} multiline>
-                    {t('en')}
-                </Cell>
-                <Cell Component="label" description="русский" before={<Selectable checked={selectedValue === "ru"} onClick={onChange} name="group" value="ru" />} multiline>
-                    {t('ru')}
-                </Cell>
-                <Cell Component="label" description="فارسی" before={<Selectable checked={selectedValue === "fa"} onClick={onChange} name="group" value="fa" />} multiline>
-                    {t('fa')}
-                </Cell>
-                <Cell Component="label" description="عربي" before={<Selectable checked={selectedValue === "ar"} onClick={onChange} name="group" value="ar" />} multiline>
-                    {t('ar')}
-                </Cell>
-            </form>
+                <div
+                style={{
+                    height: "240px",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                }}
+                >
+                <div style={{ width: "40%", height: 180 }}>
+                        <LanguageWheel
+                            perspective="center"
+                            length={languages.length}
+                            width={200}
+                            setValue={handleLanguageChange}
+                        />
+                    </div>
+            </div>
         </Section>
     </List>
 

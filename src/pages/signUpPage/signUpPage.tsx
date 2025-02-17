@@ -14,7 +14,7 @@ import WorkAndEducationStep from './steps/workAndEducation';
 export const SignUpPage = () => {
 
   const { t } = useTranslation();
-  const [selectedTab, setSelectedTab] = useState(3)
+  const [selectedTab, setSelectedTab] = useState(0)
 
 
   const PreviousTab = () => {
