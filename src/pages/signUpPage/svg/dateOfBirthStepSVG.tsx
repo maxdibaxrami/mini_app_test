@@ -2,7 +2,7 @@ export const DateOfBirth = ()=> {
     return <svg 
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 500 500"
-    style={{width:"150px",height:"150px"}}
+    style={{width:"200px",height:"200px"}}
     >
     <g id="freepik--background-complete--inject-21">
       <path

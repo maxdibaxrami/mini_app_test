@@ -4,7 +4,7 @@ export const ProfileDataSVg = () => {
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
     viewBox="0 0 500 500"
-    style={{width:"150px",height:"150px"}}
+    style={{width:"200px",height:"200px"}}
   >
     <defs>
       <clipPath id="freepik--clip-path--inject-2">
