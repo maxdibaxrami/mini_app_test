@@ -20,20 +20,20 @@ export default () => {
         alignItems: "center",
       }}
     >
-      <div style={{ width: "40%", height: 240 }}>
-        <p className="text-center text-black-500 py-1">{t("year")}</p>
+      <div style={{ width: "40%", height: 180 }}>
+        <p className="text-center text-black-500">{t("year")}</p>
         <Wheel
           length={years.length}
           width={140}
           setValue={formatYear}
         />
       </div>
-      <div style={{ width: "30%", height: 240 }}>
-        <p className="text-center text-black-500 py-1">{t("month")}</p>
+      <div style={{ width: "30%", height: 180 }}>
+        <p className="text-center text-black-500">{t("month")}</p>
         <Wheel length={12} width={23} />
       </div>
-      <div style={{ width: "30%", height: 240 }}>
-        <p className="text-center text-black-500 py-1">{t("day")}</p>
+      <div style={{ width: "30%", height: 180 }}>
+        <p className="text-center text-black-500">{t("day")}</p>
         <Wheel length={12} width={23} />
       </div>
     </div>

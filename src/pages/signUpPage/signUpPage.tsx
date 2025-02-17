@@ -13,7 +13,7 @@ import DateOfBirthStep from './steps/dateOfBirth';
 export const SignUpPage = () => {
 
   const { t } = useTranslation();
-  const [selectedTab, setSelectedTab] = useState(2)
+  const [selectedTab, setSelectedTab] = useState(0)
 
 
   const PreviousTab = () => {
