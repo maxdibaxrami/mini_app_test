@@ -28,12 +28,12 @@ const ProfileDataStep = () => {
         <Section
                 header={t("Iam")}
             >
-                <div className="grid gap-2 grid-cols-2 py-2">
-                    <Chip mode="elevated" Component="label" before={<Radio name="Male" defaultChecked />}>
+                <div className="grid gap-4 grid-cols-2">
+                    <Chip mode="outline" Component="label" before={<Radio name="Male" defaultChecked />}>
                         {t("Male")}
                     </Chip>
 
-                    <Chip mode="elevated" Component="label" before={<Radio name="Female" />}>
+                    <Chip mode="outline" Component="label" before={<Radio name="Female" />}>
                         {t("Female")}
                     </Chip>
                 </div>
