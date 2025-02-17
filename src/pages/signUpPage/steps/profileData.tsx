@@ -28,7 +28,7 @@ const ProfileDataStep = () => {
         <Section
                 header={t("Iam")}
             >
-                <div className="grid gap-1 grid-cols-2 py-4">
+                <div className="grid gap-1 grid-cols-2 py-4 px-2">
                     <Chip mode="mono" Component="label" before={<Radio name="Male" defaultChecked />}>
                         {t("Male")}
                     </Chip>
