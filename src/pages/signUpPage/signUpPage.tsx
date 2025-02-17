@@ -33,14 +33,17 @@ export const SignUpPage = () => {
 
   return (
     <Page back={true}>
-      <div className='safe-area-top top-bar-height flex items-center justify-center'>
-        <SparklesText text="Mull Mull" />
-      </div>
-
-        <Steps
-          count={10}
-          progress={selectedTab}
-        />
+      <div className='fixed w-full bg-white top-0'>
+        <div className='safe-area-top top-bar-height flex items-center justify-center'>
+          <SparklesText text="Mull Mull" />
+        </div>
+        <div >
+          <Steps
+            count={10}
+            progress={selectedTab}
+          />
+        </div>
+       </div>
         
         {selectedTab === 0 && <LanguageStep/>}
         {selectedTab === 1 && <ProfileDataStep/>}
