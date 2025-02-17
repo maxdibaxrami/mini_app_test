@@ -35,7 +35,7 @@ export const SignUpPage = () => {
 
   return (
     <Page back={true}>
-      <div className='fixed w-full bg-white top-0'>
+      <div className='fixed w-full bg-black top-0'>
         <div className='safe-area-top top-bar-height flex items-center justify-center'>
           <SparklesText text="Mull Mull" />
         </div>
@@ -71,8 +71,8 @@ export const SignUpPage = () => {
 
         <SecondaryButton
           text={t('previous')}
-          backgroundColor="#FFFFFF"
-          textColor="#000000"
+          backgroundColor="#000000"
+          textColor="#FFFFFF"
           hasShineEffect={false}
           isEnabled={true}
           isLoaderVisible={false}

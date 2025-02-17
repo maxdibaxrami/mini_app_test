@@ -16,6 +16,10 @@ const LanguageStep = () => {
     };
     
     return <List
+        style={{
+            backgroundColor:"#000000",
+            height:"100%"
+        }}
     >
         <div style={{display:"flex", alignItems:"center",justifyContent:"center",width:"100%"}}>
             <LanguageStepSVG/>
