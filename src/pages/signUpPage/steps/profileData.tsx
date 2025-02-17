@@ -22,30 +22,21 @@ const ProfileDataStep = () => {
                 placeholder={t("name_placeholder")}
             />
 
-        </Section>
+            <Textarea header={t("Bio")} placeholder={t("bio_placeholder")} />
 
             <div
-                style={{
-                    display: 'flex',
-                    gap: 8,
-                    padding:"20px 22px 16px"
-                  }}
+                className="grid gap-2 grid-cols-2 py-2"
 
             >
-                <Chip className="w-50" mode="elevated" Component="label" before={<Radio name="Male" defaultChecked />}>
+                <Chip className="w-100" mode="elevated" Component="label" before={<Radio name="Male" defaultChecked />}>
                     {t("Male")}
                 </Chip>
 
-                <Chip className="w-50" mode="elevated" Component="label" before={<Radio name="Female" />}>
+                <Chip className="w-100" mode="elevated" Component="label" before={<Radio name="Female" />}>
                     {t("Female")}
                 </Chip>
             </div>
 
-        <Section
-            header={t("Bio")}
-            style={{marginBottom:0}}
-        >
-            <Textarea header={t("Bio")} placeholder={t("bio_placeholder")} />
         </Section>
 
 
