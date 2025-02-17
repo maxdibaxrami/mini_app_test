@@ -21,7 +21,7 @@ export default () => {
       }}
     >
       <div style={{ width: "40%", height: 240 }}>
-        <p className="text-center text-black-500">{t("year")}</p>
+        <p className="text-center text-black-500 py-1">{t("year")}</p>
         <Wheel
           length={years.length}
           width={140}
@@ -29,11 +29,11 @@ export default () => {
         />
       </div>
       <div style={{ width: "30%", height: 240 }}>
-        <p className="text-center text-black-500">{t("month")}</p>
+        <p className="text-center text-black-500 py-1">{t("month")}</p>
         <Wheel length={12} width={23} />
       </div>
       <div style={{ width: "30%", height: 240 }}>
-        <p className="text-center text-black-500">{t("day")}</p>
+        <p className="text-center text-black-500 py-1">{t("day")}</p>
         <Wheel length={12} width={23} />
       </div>
     </div>
