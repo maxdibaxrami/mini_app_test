@@ -1,5 +1,5 @@
 
-import { List, Cell, Section, Selectable } from "@telegram-apps/telegram-ui"
+import { List, Section } from "@telegram-apps/telegram-ui"
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { LanguageStepSVG } from "../svg/languageStepSVG";
@@ -12,6 +12,9 @@ const LanguageStep = () => {
 
     const handleLanguageChange = (index: number, language: Language) => {
       setSelectedLanguage(language);
+      console.log(index)
+      console.log(selectedLanguage)
+
     };
     
     return <List
