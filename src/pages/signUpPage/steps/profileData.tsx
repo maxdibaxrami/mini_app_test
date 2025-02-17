@@ -1,6 +1,6 @@
 
 import DatePicker from "@/components/DateTimePicker";
-import { List, Section, Input, Textarea, Chip, Radio, Cell } from "@telegram-apps/telegram-ui"
+import { List, Section, Input, Textarea, Chip, Radio } from "@telegram-apps/telegram-ui"
 import { useTranslation } from "react-i18next";
 
 
@@ -18,19 +18,10 @@ const ProfileDataStep = () => {
 
         >
 
-
-        <Cell
-            subtitle={
-                <Input
-                    placeholder={t("name_placeholder")}
-                />
-            }
-            >
-            {t("name")}
-
-        </Cell>
-
-            
+            <Input
+                header={t("name")}
+                placeholder={t("name_placeholder")}
+            />
 
             <Textarea header={t("Bio")} placeholder={t("bio_placeholder")} />
 
