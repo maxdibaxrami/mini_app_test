@@ -1,7 +1,7 @@
 
-import DatePicker from "@/components/DateTimePicker";
 import { List, Section, Input, Textarea, Chip, Radio } from "@telegram-apps/telegram-ui"
 import { useTranslation } from "react-i18next";
+import { ProfileDataSVg } from "../svg/profileDataSVG";
 
 
 const ProfileDataStep = () => {
@@ -12,6 +12,10 @@ const ProfileDataStep = () => {
         background: 'var(--tgui--secondary_bg_color)',
         }}
     >
+        <div style={{display:"flex", alignItems:"center",justifyContent:"center",width:"100%"}}>
+           <ProfileDataSVg/>
+        </div>
+
 
         <Section
                 header={t("Iam")}
@@ -40,14 +44,6 @@ const ProfileDataStep = () => {
             <Textarea placeholder={t("bio_placeholder")} />
 
         </Section>
-
-
-
-        <Section header={t("Selectdateofbirth")}>
-            <DatePicker/>
-        </Section>
-
-
 
   </List>
 
