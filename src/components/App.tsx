@@ -36,7 +36,6 @@ export function App() {
     
   }, [i18next]);
 
-
   return (
     <I18nextProvider i18n={i18next}>
         <AppRoot

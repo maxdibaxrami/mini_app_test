@@ -35,8 +35,9 @@ export const SignUpPage = () => {
 
   return (
     <Page back={true}>
-      <div className='fixed w-full bg-black top-0'>
-        <div className='safe-area-top top-bar-height flex items-center justify-center'>
+      <div>
+      <div className='fixed w-full bg-white top-0'>
+        <div className='safe-area-top bg-white top-bar-height flex items-center justify-center'>
           <SparklesText text="Mull Mull" />
         </div>
         <div >
@@ -46,8 +47,10 @@ export const SignUpPage = () => {
           />
         </div>
        </div>
+      
+
         
-        <div className='main-content-safe mt-6 '>
+        <div className='main-content-safe mt-6'>
           {selectedTab === 0 && <LanguageStep/>}
           {selectedTab === 1 && <ProfileDataStep/>}
           {selectedTab === 2 && <DateOfBirthStep/>}
@@ -80,7 +83,7 @@ export const SignUpPage = () => {
           position="left"
           onClick={PreviousTab}
         />
-
+        </div>
     </Page>
   );
 };

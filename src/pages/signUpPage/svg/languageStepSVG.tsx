@@ -4,7 +4,7 @@ export const LanguageStepSVG = () => {
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
     viewBox="0 0 500 500"
-    style={{width:"300px",height:"300px"}}
+    style={{width:"250px",height:"250px"}}
   >
     <defs>
       <clipPath id="freepik--clip-path--inject-62">

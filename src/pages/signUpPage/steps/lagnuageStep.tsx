@@ -1,12 +1,15 @@
 
-import { List } from "@telegram-apps/telegram-ui"
+import { List, Section, Title } from "@telegram-apps/telegram-ui"
 import { useState } from "react";
-import { LanguageStepSVG } from "../svg/languageStepSVG";
 import { LanguageWheel, languages, Language } from "@/components/langaugeWheel";
+import { useTranslation } from "react-i18next";
+import { LanguageIcon } from "@/components/icon";
+import { SignUpIconWrapper } from "@/components/signupIconWrapper";
 
 
 const LanguageStep = () => {
     const [selectedLanguage, setSelectedLanguage] = useState<Language>(languages[0]);
+    const { t } = useTranslation();
 
     const handleLanguageChange = (index: number, language: Language) => {
       setSelectedLanguage(language);
@@ -16,17 +19,27 @@ const LanguageStep = () => {
     };
     
     return <List
-        style={{
-            height:"100%"
-        }}
     >
-        <div style={{display:"flex", alignItems:"center",justifyContent:"center",width:"100%"}}>
-            <LanguageStepSVG/>
-        </div>
+       <div className="mt-6 flex items-center jusitfy-center flex-col">
+       
+       
+        <SignUpIconWrapper className="bg-black text-white p-2">
+            <LanguageIcon/>
+        </SignUpIconWrapper>
+        <Title
+            level="1"
+            weight="2"
+        >
+            {t('Selectlanguageforcontinue')}
+        </Title>
 
+       </div>
+
+        <Section>
+            
             <div
                 style={{
-                    height: "240px",
+                    height: "200px",
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
@@ -41,6 +54,8 @@ const LanguageStep = () => {
                         />
                     </div>
             </div>
+
+        </Section>
     </List>
 
 }
