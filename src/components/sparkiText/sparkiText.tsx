@@ -61,7 +61,7 @@ interface SparklesTextProps {
 const SparklesText: React.FC<SparklesTextProps> = ({
   text,
   colors = { first: "#1FB6A8", second: "#F59E0B" },
-  className,
+  className="",
   sparklesCount = 20,
   ...props
 }) => {
@@ -117,7 +117,7 @@ const SparklesText: React.FC<SparklesTextProps> = ({
         {sparkles.map((sparkle) => (
           <Sparkle key={sparkle.id} {...sparkle} />
         ))}
-        <p style={{fontFamily:"Parkinsans"}} className="font-bold ml-1 text-black text-center font-bold tracking-tighter  md:leading-[4rem] w-fit flex items-center jusitfy-center mx-auto gap-1.5" >{text}</p>
+        <p style={{fontFamily:"Parkinsans"}} className={`font-bold ml-1 fore-ground-text-color text-center font-bold tracking-tighter  md:leading-[4rem] w-fit flex items-center jusitfy-center mx-auto gap-1.5 ${className}`} >{text}</p>
       </span>
     </div>
   );

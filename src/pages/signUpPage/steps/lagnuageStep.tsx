@@ -1,10 +1,10 @@
 
-import { List, Section, Title } from "@telegram-apps/telegram-ui"
+import { List, Section, Subheadline } from "@telegram-apps/telegram-ui"
 import { useState } from "react";
 import { LanguageWheel, languages, Language } from "@/components/langaugeWheel";
 import { useTranslation } from "react-i18next";
 import { LanguageIcon } from "@/components/icon";
-import { SignUpIconWrapper } from "@/components/signupIconWrapper";
+import { SparklesText } from "@/components/sparkiText/sparkiText";
 
 
 const LanguageStep = () => {
@@ -19,21 +19,12 @@ const LanguageStep = () => {
     };
     
     return <List
+    className="main-content-safe"
     >
-       <div className="mt-6 flex items-center jusitfy-center flex-col">
-       
-       
-        <SignUpIconWrapper className="bg-black text-white p-2">
-            <LanguageIcon/>
-        </SignUpIconWrapper>
-        <Title
-            level="1"
-            weight="2"
-        >
-            {t('Selectlanguageforcontinue')}
-        </Title>
+        <div className="flex items-center justify-center">
+            <SparklesText text="Mull Mull" sparklesCount={10} className="text-5xl"/>
+        </div>
 
-       </div>
 
         <Section>
             
@@ -46,6 +37,14 @@ const LanguageStep = () => {
                 }}
                 >
                 <div style={{ width: "100%", height: 180 }}>
+                <Subheadline
+                    level="1"
+                    weight="2"
+                    style={{display:"flex",alignItems:"center",justifyContent:"center",gap:4}}
+                >
+                    <LanguageIcon className="size-5"/>
+                    {t("Selectlanguageforcontinue")}
+                </Subheadline>
                         <LanguageWheel
                             perspective="center"
                             length={languages.length}

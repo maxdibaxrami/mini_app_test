@@ -9,6 +9,7 @@ import MainButton from '@/lib/MainButton';
 import SecondaryButton from '@/lib/SecondaryButton';
 import DateOfBirthStep from './steps/dateOfBirth';
 import WorkAndEducationStep from './steps/workAndEducation';
+import { motion } from "framer-motion";
 
 
 export const SignUpPage = () => {
@@ -36,8 +37,8 @@ export const SignUpPage = () => {
   return (
     <Page back={true}>
       <div>
-      <div className='fixed w-full bg-white top-0'>
-        <div className='safe-area-top bg-white top-bar-height flex items-center justify-center'>
+      <motion.div animate={selectedTab === 0 ? {opacity:0}:{opacity:1}} className='fixed w-full section-bg-color top-0'>
+        <div className='safe-area-top section-bg-color top-bar-height flex items-center justify-center'>
           <SparklesText text="Mull Mull" />
         </div>
         <div >
@@ -46,7 +47,7 @@ export const SignUpPage = () => {
             progress={selectedTab}
           />
         </div>
-       </div>
+       </motion.div>
       
 
         

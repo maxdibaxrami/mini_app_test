@@ -7,13 +7,14 @@ export interface Language {
   value: string;
   label: string;
   description: string;
+  flaq:string;
 }
 
 export const languages: Language[] = [
-  { value: "en", label: "English", description: "English" },
-  { value: "ru", label: "русский", description: "Russian" },
-  { value: "fa", label: "فارسی", description: "Persian" },
-  { value: "ar", label: "عربي", description: "Arabic" },
+  { value: "en", label: "English", description: "English", flaq:"🇬🇧" },
+  { value: "ru", label: "русский", description: "Russian", flaq:"🇷🇺" },
+  { value: "fa", label: "فارسی", description: "Persian", flaq:"🇮🇷" },
+  { value: "ar", label: "عربي", description: "Arabic", flaq:"🇦🇪" },
 ];
 
 // WheelProps interface
@@ -117,7 +118,7 @@ export const LanguageWheel: React.FC<WheelProps> = (props) => {
         <div className="wheel__slides" style={{ width: props.width + "px" }}>
           {slideValues().map(({ style, language }, idx) => (
             <div className="wheel__slide" style={style} key={idx}>
-              <span>{language.label}</span>
+              <span>{language.flaq} {language.label} </span>
             </div>
           ))}
         </div>
