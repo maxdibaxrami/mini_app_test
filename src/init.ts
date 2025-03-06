@@ -8,7 +8,6 @@ import {
   init as initSDK,
   mainButton,
   secondaryButton,
-  postEvent
 } from '@telegram-apps/sdk-react';
 
 /**
