@@ -1,20 +1,25 @@
 
-import { List, Section, Input, Textarea, Chip, Radio } from "@telegram-apps/telegram-ui"
+import { List, Section, Input, Textarea, Chip, Radio, Headline, Subheadline } from "@telegram-apps/telegram-ui"
 import { useTranslation } from "react-i18next";
-import { ProfileDataSVg } from "../svg/profileDataSVG";
 
 
 const ProfileDataStep = () => {
     const { t } = useTranslation();
 
     return <List
-       
     >
-        <div style={{display:"flex", alignItems:"center",justifyContent:"center",width:"100%"}}>
-           <ProfileDataSVg/>
-        </div>
+          <Headline
+                weight="1"
+            >
+                {t("Fillprofiledata")}
+            </Headline>
 
-
+            <Subheadline
+                level="1"
+                weight="3"
+            >
+                {t("secondaryText")}
+            </Subheadline>
         <Section
                 header={t("Iam")}
             >

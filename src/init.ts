@@ -38,8 +38,8 @@ export function init(debug: boolean): void {
   miniApp.mount();
   themeParams.mount();
   initData.restore();
-  postEvent('web_app_set_bottom_bar_color', { color: "#000000" });
-  postEvent('web_app_set_background_color', { color: "#000000" });
+  //postEvent('web_app_set_bottom_bar_color', { color: "#000000" });
+  //postEvent('web_app_set_background_color', { color: "#000000" });
 
 
   // Bind viewport and request fullscreen functionality.
@@ -52,14 +52,14 @@ export function init(debug: boolean): void {
       viewport.bindCssVars(); // Binds the default Telegram theme parameters
       viewport.requestFullscreen();
     });
-
+    themeParams.bindCssVars()
   // Apply custom theme after default theme is bound
-  applyCustomTheme();
+  //applyCustomTheme();
 }
 
 /**
  * Overrides Telegram's default theme colors with custom values.
- */
+
 function applyCustomTheme() {
   document.documentElement.style.setProperty('--tg-theme-accent-text-color', '#1FB6A8'); // Primary accent color
   document.documentElement.style.setProperty('--tg-theme-bg-color', '#000000'); // Black background
@@ -75,3 +75,5 @@ function applyCustomTheme() {
   document.documentElement.style.setProperty('--tg-theme-subtitle-text-color', '#909090'); // Subtitle text (lighter gray)
   document.documentElement.style.setProperty('--tg-theme-text-color', '#ffffff'); // Main text color (white)
 }
+
+ */

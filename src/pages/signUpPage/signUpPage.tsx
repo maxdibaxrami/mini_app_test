@@ -15,7 +15,7 @@ import { motion } from "framer-motion";
 export const SignUpPage = () => {
 
   const { t } = useTranslation();
-  const [selectedTab, setSelectedTab] = useState(0)
+  const [selectedTab, setSelectedTab] = useState(1)
 
 
   const PreviousTab = () => {
@@ -37,8 +37,8 @@ export const SignUpPage = () => {
   return (
     <Page back={true}>
       <div>
-      <motion.div animate={selectedTab === 0 ? {opacity:0}:{opacity:1}} className='fixed w-full section-bg-color top-0'>
-        <div className='safe-area-top section-bg-color top-bar-height flex items-center justify-center'>
+      <motion.div animate={selectedTab === 0 ? {opacity:0}:{opacity:1}} className='fixed w-full top-0'>
+        <div className='safe-area-top top-bar-height flex items-center justify-center'>
           <SparklesText text="Mull Mull" />
         </div>
         <div >
@@ -80,7 +80,7 @@ export const SignUpPage = () => {
           hasShineEffect={false}
           isEnabled={true}
           isLoaderVisible={false}
-          isVisible={true}
+          isVisible={selectedTab === 0 ? false : true}
           position="left"
           onClick={PreviousTab}
         />

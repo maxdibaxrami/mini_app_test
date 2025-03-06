@@ -3,7 +3,6 @@
     "welcome": "Welcome",
     "description": "This is a multi-language app",
     "Selectlanguageforcontinue":"Select language for continue",
-    "Fillprofiledata":"Fill profile data :",
     "name":"Name",
     "Bio":"Bio",
     "Education":"Education",
@@ -363,7 +362,14 @@
 
     "year":"Year",
     "day":"Day",
-    "month":"Month"
+    "month":"Month",
+
+    "firstpage_description":"Discover new connections, chat, and find matches that fit your vibe!",
+    "privacy_policy": "By clicking 'Next', you agree to our Privacy Policy and Terms of Service.",
+
+    "Fillprofiledata": "Complete Your Profile Information:",
+    "secondaryText": "Provide your details to enhance your experience and find better matches."
+ 
     
   }
   
